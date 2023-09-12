@@ -17,7 +17,7 @@ final class Product {
     var isSelected: Bool = false
     var price: Double? = nil
     var image: ProductImage? = nil
-    var sections: [ProductSection] = []
+    var section: ProductSection?
     
     init(name: String, timestamp: Date = Date()) {
         self.name = name

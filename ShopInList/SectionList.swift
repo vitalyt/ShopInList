@@ -10,6 +10,7 @@ import SwiftData
 
 struct SectionList: View {
     var model: Product
+    let didSelect: ((_ item: ProductSection) -> Void)?
     
     @Environment(\.modelContext) private var modelContext
     @Environment(\.dismiss) private var dismiss
@@ -17,41 +18,41 @@ struct SectionList: View {
     static let sortDescriptors: [SortDescriptor<ProductSection>] = [SortDescriptor(\ProductSection.timestamp, order: .reverse)]
     @Query(sort: sortDescriptors) private var items: [ProductSection]
     
-    init(model: Product) {
+    init(model: Product, didSelect: ((_ item: ProductSection) -> Void)? = nil) {
         self.model = model
-        self.model.sections.forEach({ $0.isSelected = true })
+        self.didSelect = didSelect
     }
     
     var body: some View {
-            List {
-                ForEach(items) { item in
-                    NavigationLink {
-                        ProductSectionEditView(model: item)
-                    } label: {
-                        ProductSectionListItemView(model: item, editable: true)
-                    }
-                }
-                .onDelete(perform: { offsets in
-                    delete(items: items, offsets: offsets)
-                })
-            }
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    Button(action: doneAction) {
-                        Label("Done", systemImage: "done")
-                    }
-                }
-                ToolbarItem(placement: .automatic) {
-                    EditButton()
-                }
-                ToolbarItem() {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
+        List {
+            ForEach(items) { item in
+                NavigationLink {
+                    ProductSectionEditView(model: item)
+                } label: {
+                    let isSelected = self.model.section == item
+                    ProductSectionListItemView(model: item, editable: true, isSelected: isSelected) { item in
+                        self.didSelect?(item)
+                        self.dismiss()
                     }
                 }
             }
-            .navigationTitle("Sections")
-        
+            .onDelete(perform: { offsets in
+                delete(items: items, offsets: offsets)
+            })
+        }
+        .toolbar {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Button(action: doneAction) {
+                    Label("Done", systemImage: "done")
+                }
+            }
+            ToolbarItem() {
+                Button(action: addItem) {
+                    Label("Add Item", systemImage: "plus")
+                }
+            }
+        }
+        .navigationTitle("Sections")
     }
 
     private func addItem() {
@@ -64,7 +65,7 @@ struct SectionList: View {
     private func doneAction() {
         withAnimation {
             let selectedSections = items.filter({ $0.isSelected })
-            model.sections = selectedSections
+            model.section = selectedSections.first
             selectedSections.forEach({ $0.isSelected = false })
             dismiss()
         }

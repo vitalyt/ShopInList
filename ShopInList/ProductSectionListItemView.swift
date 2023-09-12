@@ -10,13 +10,16 @@ import SwiftUI
 struct ProductSectionListItemView: View {
     @Environment(\.modelContext) private var modelContext
     var model: ProductSection
+    let didSelect: ((_ item: ProductSection) -> Void)?
     
     @State private var isEditable: Bool
     @State private var isOn: Bool
     
-    init(model: ProductSection, editable: Bool = false) {
+    init(model: ProductSection, editable: Bool = false, isSelected: Bool = false, didSelect: ((_ item: ProductSection) -> Void)? = nil) {
         self.model = model
-        isOn = model.isSelected
+        self.didSelect = didSelect
+        
+        isOn = isSelected
         isEditable = editable
     }
     
@@ -33,7 +36,7 @@ struct ProductSectionListItemView: View {
                 .toggleStyle(.button)
                 .buttonStyle(.plain)
                 .onChange(of: isOn) {
-                    model.isSelected = isOn
+                    self.didSelect?(model)
                 }
             }
             Text(model.name)
