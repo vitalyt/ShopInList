@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "0AC9FC0A-148A-4AAF-A64D-9F92CC1E1388"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4997DE84-447F-4DF0-827B-8E4F1D6744A1"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ShopInList/ImagePicker.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "init(model:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3E6359E1-7834-4DAC-ACC5-DCB25D37AF97"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ShopInList/ImagePicker.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "3E6359E1-7834-4DAC-ACC5-DCB25D37AF97 - f2df2831d3a6f75b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ShopInList.ImagePicherView.body.getter : some"
+                  moduleName = "ShopInList"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/uzer/Documents/Projects/ShopInList/ShopInList/ImagePicker.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "508">
+               </Location>
+               <Location
+                  uuid = "3E6359E1-7834-4DAC-ACC5-DCB25D37AF97 - 7a03c900855ab7af"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 () -&gt; ShopInList.ImagePicker in ShopInList.ImagePicherView.body.getter : some"
+                  moduleName = "ShopInList"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/uzer/Documents/Projects/ShopInList/ShopInList/ImagePicker.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "172">
+               </Location>
+               <Location
+                  uuid = "3E6359E1-7834-4DAC-ACC5-DCB25D37AF97 - 7a03c900855ab7af"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 () -&gt; ShopInList.ImagePicker in ShopInList.ImagePicherView.body.getter : some"
+                  moduleName = "ShopInList"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/uzer/Documents/Projects/ShopInList/ShopInList/ImagePicker.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "184">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

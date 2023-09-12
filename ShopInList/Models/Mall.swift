@@ -1,5 +1,5 @@
 //
-//  Item.swift
+//  Mall.swift
 //  ShopInList
 //
 //  Created by Vitalii Todorovych on 01.09.2023.
@@ -9,10 +9,10 @@ import Foundation
 import SwiftData
 
 @Model
-final class Item {
-    var timestamp: Date
+final class Mall {
+    let name: String
     
-    init(timestamp: Date) {
-        self.timestamp = timestamp
+    init(name: String) {
+        self.name = name
     }
 }

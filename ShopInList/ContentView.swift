@@ -10,19 +10,44 @@ import SwiftData
 
 struct ContentView: View {
     @Environment(\.modelContext) private var modelContext
-    @Query private var items: [Item]
-
+    static let sortDescriptors: [SortDescriptor<Product>] = [SortDescriptor(\Product.order, order: .forward), SortDescriptor(\Product.timestamp, order: .reverse)]
+    @Query(filter:#Predicate<Product> { !$0.isSelected }, sort: sortDescriptors) private var items: [Product]
+    @Query(filter:#Predicate<Product> { $0.isSelected }, sort: sortDescriptors) private var selectedItems: [Product]
+    
     var body: some View {
         NavigationSplitView {
             List {
-                ForEach(items) { item in
-                    NavigationLink {
-                        Text("Item at \(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))")
-                    } label: {
-                        Text(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))
+                Section(header: Text("Products")) {
+                    ForEach(items) { item in
+                        NavigationLink {
+                            EditView(model: item)
+                        } label: {
+                            ProductListItemView(model: item)
+                        }
+                    }
+                    .onDelete(perform: { offsets in
+                        delete(items: items, offsets: offsets)
+                    })
+                    .onMove { offsets, index in
+                        moveItems(items: items, offsets: offsets, index: index)
                     }
                 }
-                .onDelete(perform: deleteItems)
+                Section(header: Text("Selected Products")) {
+                    ForEach(selectedItems) { item in
+                        NavigationLink {
+                            EditView(model: item)
+                        } label: {
+                            ProductListItemView(model: item)
+                        }
+                    }
+                    .onDelete(perform: { offsets in
+                        delete(items: selectedItems, offsets: offsets)
+                    })
+                    .onMove { offsets, index in
+                        moveItems(items: selectedItems, offsets: offsets, index: index)
+                    }
+                    
+                }
             }
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
@@ -34,6 +59,7 @@ struct ContentView: View {
                     }
                 }
             }
+            .navigationTitle("Products")
         } detail: {
             Text("Select an item")
         }
@@ -41,15 +67,25 @@ struct ContentView: View {
 
     private func addItem() {
         withAnimation {
-            let newItem = Item(timestamp: Date())
+            let newItem = Product(name: "QQQ product")
             modelContext.insert(newItem)
         }
     }
 
-    private func deleteItems(offsets: IndexSet) {
+    private func delete(items: [Product], offsets: IndexSet) {
         withAnimation {
             for index in offsets {
                 modelContext.delete(items[index])
+            }
+        }
+    }
+    
+    private func moveItems(items: [Product], offsets: IndexSet, index: Int) {
+        withAnimation {
+            var items = items
+            items.move(fromOffsets: offsets, toOffset: index)
+            for (index, item) in items.enumerated() {
+                item.order = index
             }
         }
     }
@@ -57,5 +93,5 @@ struct ContentView: View {
 
 #Preview {
     ContentView()
-        .modelContainer(for: Item.self, inMemory: true)
+        .modelContainer(for: Product.self, inMemory: true)
 }
