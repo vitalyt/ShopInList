@@ -54,13 +54,6 @@ struct ProductList: View {
         }.navigationTitle(products.first?.section?.name ?? "Unknown")
     }
 
-    private func addItem() {
-        withAnimation {
-            let newItem = Product(name: "QQQ product")
-            modelContext.insert(newItem)
-        }
-    }
-
     private func delete(items: [Product], offsets: IndexSet) {
         withAnimation(.easeInOut, {
             for index in offsets {
@@ -81,7 +74,7 @@ struct ProductList: View {
 }
 
 #Preview {
-    ContentView()
+    MainView()
         .modelContainer(for: Product.self, inMemory: true)
 }
 

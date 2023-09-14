@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  MainView.swift
 //  ShopInList
 //
 //  Created by Vitalii Todorovych on 01.09.2023.
@@ -8,7 +8,7 @@
 import SwiftUI
 import SwiftData
 
-struct ContentView: View {
+struct MainView: View {
     @Environment(\.modelContext) private var modelContext
     
     static let sortDescriptors: [SortDescriptor<Product>] = [SortDescriptor(\Product.order, order: .forward), SortDescriptor(\Product.timestamp, order: .reverse)]
@@ -46,7 +46,7 @@ struct ContentView: View {
 
     private func addItem() {
         withAnimation {
-            let newItem = Product(name: "QQQ product")
+            let newItem = Product(name: "New product")
             if selectedItem < productSections.count {            
                 newItem.section = productSections[selectedItem]
             }
@@ -74,6 +74,6 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    MainView()
         .modelContainer(for: Product.self, inMemory: true)
 }
