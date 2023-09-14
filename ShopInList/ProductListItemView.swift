@@ -12,6 +12,7 @@ struct ProductListItemView: View {
     var model: Product
     
     @State private var isOn: Bool
+    private let heightCell = 44.0
     
     init(model: Product) {
         self.model = model
@@ -38,11 +39,11 @@ struct ProductListItemView: View {
                         Image(uiImage: uiImage)
                             .resizable()
                             .scaledToFill()
-                            .frame(width: 50, height: 50)
+                            .frame(maxWidth: heightCell, maxHeight: heightCell)
                             .cornerRadius(5)
-                            .padding()
                     }
         }
+        .frame(height: heightCell)
     }
 }
 

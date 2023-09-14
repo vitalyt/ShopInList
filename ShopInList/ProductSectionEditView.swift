@@ -23,7 +23,7 @@ struct ProductSectionEditView: View {
     }
     
     var body: some View {
-        VStack {
+        VStack(alignment: .leading, spacing: 10) {
                 PhotosPicker(selection: $selectedItem) {
                     Image(systemName: "photo")
                         .font(.headline)

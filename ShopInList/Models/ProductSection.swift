@@ -12,6 +12,7 @@ import SwiftData
 @Model
 final class ProductSection {
     var name: String
+    var order: Int = 0
     var isSelected: Bool = false
     var image: ProductImage? = nil
     var timestamp: Date

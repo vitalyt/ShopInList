@@ -23,16 +23,23 @@ struct EditView: View {
     init(model: Product) {
         self.model = model
         self.selectedImageData = model.image?.imageData
-        
-//        model.sections.forEach({ $0.isSelected = true })
     }
     
     var body: some View {
-        VStack {
+        VStack(alignment: .leading, spacing: 10) {
+            if let imageData = model.image?.imageData,
+               let uiImage = UIImage(data: imageData) {
+                Image(uiImage: uiImage)
+                    .resizable()
+                    .scaledToFill()
+                    .frame(width: 250, height: 250)
+                    .cornerRadius(10)
+            }
+            
             PhotosPicker(selection: $selectedItem) {
                 Image(systemName: "photo")
                     .font(.headline)
-                Text("IMPORT").font(.headline)
+                Text("Change Image").font(.headline)
             }
             .onChange(of: selectedItem) {
                 Task {
@@ -43,14 +50,7 @@ struct EditView: View {
                     }
                 }
             }
-            if let imageData = model.image?.imageData,
-               let uiImage = UIImage(data: imageData) {
-                Image(uiImage: uiImage)
-                    .resizable()
-                    .scaledToFill()
-                    .frame(width: 250, height: 250)
-                    .cornerRadius(10)
-            }
+            
             HStack {
                 Text("Name:")
                 TextField(model.name, text: $productName, onCommit: {

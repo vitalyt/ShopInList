@@ -10,45 +10,25 @@ import SwiftData
 
 struct ContentView: View {
     @Environment(\.modelContext) private var modelContext
+    
     static let sortDescriptors: [SortDescriptor<Product>] = [SortDescriptor(\Product.order, order: .forward), SortDescriptor(\Product.timestamp, order: .reverse)]
-    @Query(filter:#Predicate<Product> { !$0.isSelected }, sort: sortDescriptors) private var items: [Product]
-    @Query(filter:#Predicate<Product> { $0.isSelected }, sort: sortDescriptors) private var selectedItems: [Product]
+    static let sortDescriptorsForSections: [SortDescriptor<ProductSection>] = [SortDescriptor(\ProductSection.order, order: .forward), SortDescriptor(\ProductSection.timestamp, order: .reverse)]
+    @State private var selectedItem = 0
+    
+    @Query(sort: sortDescriptorsForSections) private var productSections: [ProductSection]
+    @Query(filter:#Predicate<Product> { $0.section == nil }, sort: sortDescriptors) private var productsWithoutSection: [Product]
     
     var body: some View {
         NavigationSplitView {
-            List {
-                Section(header: Text("Products")) {
-                    ForEach(items) { item in
-                        NavigationLink {
-                            EditView(model: item)
-                        } label: {
-                            ProductListItemView(model: item)
-                        }
-                    }
-                    .onDelete(perform: { offsets in
-                        delete(items: items, offsets: offsets)
-                    })
-                    .onMove { offsets, index in
-                        moveItems(items: items, offsets: offsets, index: index)
-                    }
+            TabView(selection: $selectedItem) {
+                ForEach(0..<productSections.count, id: \.self) { index in
+                    ProductList(products: productSections[index].products).tag(index)
                 }
-                Section(header: Text("Selected Products")) {
-                    ForEach(selectedItems) { item in
-                        NavigationLink {
-                            EditView(model: item)
-                        } label: {
-                            ProductListItemView(model: item)
-                        }
-                    }
-                    .onDelete(perform: { offsets in
-                        delete(items: selectedItems, offsets: offsets)
-                    })
-                    .onMove { offsets, index in
-                        moveItems(items: selectedItems, offsets: offsets, index: index)
-                    }
-                    
-                }
+                ProductList(products: productsWithoutSection).tag(productSections.count)
             }
+            .tabViewStyle(.page)
+            .indexViewStyle(.page(backgroundDisplayMode: .always))
+//            .navigationTitle("Products")
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     EditButton()
@@ -59,7 +39,6 @@ struct ContentView: View {
                     }
                 }
             }
-            .navigationTitle("Products")
         } detail: {
             Text("Select an item")
         }
@@ -68,6 +47,9 @@ struct ContentView: View {
     private func addItem() {
         withAnimation {
             let newItem = Product(name: "QQQ product")
+            if selectedItem < productSections.count {            
+                newItem.section = productSections[selectedItem]
+            }
             modelContext.insert(newItem)
         }
     }
