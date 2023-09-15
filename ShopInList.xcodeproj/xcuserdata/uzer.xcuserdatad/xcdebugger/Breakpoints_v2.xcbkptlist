@@ -83,5 +83,53 @@
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "367CA7EC-0C08-4AEB-B59D-B55FE10C3E4C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ShopInList/Application/ShopInListApp.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "367CA7EC-0C08-4AEB-B59D-B55FE10C3E4C - f73cdd5d325c4437"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ShopInListWatch_Watch_App.ShopInListApp.body.getter : some"
+                  moduleName = "ShopInListWatch Watch App"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/uzer/Documents/Projects/ShopInList/ShopInList/Application/ShopInListApp.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "220">
+               </Location>
+               <Location
+                  uuid = "367CA7EC-0C08-4AEB-B59D-B55FE10C3E4C - 1d2a7d921367b256"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; ShopInListWatch_Watch_App.MainView in ShopInListWatch_Watch_App.ShopInListApp.body.getter : some"
+                  moduleName = "ShopInListWatch Watch App"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/uzer/Documents/Projects/ShopInList/ShopInList/Application/ShopInListApp.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "104">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

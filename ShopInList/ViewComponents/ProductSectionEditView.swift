@@ -54,7 +54,9 @@ struct ProductSectionEditView: View {
                 })
             }
         }
+#if os(iOS)
         .textFieldStyle(RoundedBorderTextFieldStyle())
+#endif
         .padding()
         .navigationBarBackButtonHidden(false)
         .navigationTitle(model.name)

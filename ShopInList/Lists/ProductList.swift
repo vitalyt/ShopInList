@@ -38,7 +38,9 @@ struct ProductList: View {
             Section(header: Text("Selected Products")) {
                 ForEach(selectedItems) { item in
                     NavigationLink {
+#if os(iOS)
                         EditView(model: item)
+#endif
                     } label: {
                         ProductListItemView(model: item)
                     }

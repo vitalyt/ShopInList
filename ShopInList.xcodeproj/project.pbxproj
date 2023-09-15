@@ -7,14 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AF095E3F2AB4EDE400A9D7DD /* ShopInListWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF095E3E2AB4EDE400A9D7DD /* ShopInListWatchApp.swift */; };
-		AF095E412AB4EDE400A9D7DD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF095E402AB4EDE400A9D7DD /* ContentView.swift */; };
 		AF095E432AB4EDE500A9D7DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF095E422AB4EDE500A9D7DD /* Assets.xcassets */; };
 		AF095E462AB4EDE500A9D7DD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF095E452AB4EDE500A9D7DD /* Preview Assets.xcassets */; };
 		AF095E502AB4EDE500A9D7DD /* ShopInListWatch_Watch_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF095E4F2AB4EDE500A9D7DD /* ShopInListWatch_Watch_AppTests.swift */; };
 		AF095E5A2AB4EDE500A9D7DD /* ShopInListWatch_Watch_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF095E592AB4EDE500A9D7DD /* ShopInListWatch_Watch_AppUITests.swift */; };
 		AF095E5C2AB4EDE500A9D7DD /* ShopInListWatch_Watch_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF095E5B2AB4EDE500A9D7DD /* ShopInListWatch_Watch_AppUITestsLaunchTests.swift */; };
 		AF095E5F2AB4EDE500A9D7DD /* ShopInListWatch Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = AF095E3C2AB4EDE400A9D7DD /* ShopInListWatch Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		AF095E6A2AB4F1C500A9D7DD /* ProductList.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4D8C2C2AB371470096ADBA /* ProductList.swift */; };
+		AF095E6B2AB4F1C600A9D7DD /* ProductSectionListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3D91862AA5B1EE00DBA3EF /* ProductSectionListItemView.swift */; };
+		AF095E6C2AB4F1C600A9D7DD /* ProductImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDF02452AA4ACCA009E1A28 /* ProductImage.swift */; };
+		AF095E6D2AB4F1C600A9D7DD /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF5EED12AA2216700B840A4 /* MainView.swift */; };
+		AF095E6E2AB4F1C600A9D7DD /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF5EF002AA2234F00B840A4 /* Group.swift */; };
+		AF095E6F2AB4F1C600A9D7DD /* ShopInListApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF5EECF2AA2216700B840A4 /* ShopInListApp.swift */; };
+		AF095E702AB4F1C600A9D7DD /* SectionList.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3D91842AA5B0A100DBA3EF /* SectionList.swift */; };
+		AF095E712AB4F1C600A9D7DD /* ProductListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDF02492AA4CAC7009E1A28 /* ProductListItemView.swift */; };
+		AF095E722AB4F1C600A9D7DD /* DebugMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF81AF722AA4A30A0010AEC6 /* DebugMenuViewController.swift */; };
+		AF095E762AB4F1C600A9D7DD /* ProductSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF5EF022AA2235F00B840A4 /* ProductSection.swift */; };
+		AF095E772AB4F1C600A9D7DD /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF5EEFE2AA221DD00B840A4 /* Product.swift */; };
+		AF095E782AB4F1C600A9D7DD /* Mall.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF5EF042AA2250A00B840A4 /* Mall.swift */; };
+		AF095E7A2AB4FD9600A9D7DD /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDF02432AA4A575009E1A28 /* EditView.swift */; };
+		AF095E7B2AB4FE3C00A9D7DD /* ProductSectionEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3D91882AA5B29600DBA3EF /* ProductSectionEditView.swift */; };
 		AF3D91852AA5B0A100DBA3EF /* SectionList.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3D91842AA5B0A100DBA3EF /* SectionList.swift */; };
 		AF3D91872AA5B1EE00DBA3EF /* ProductSectionListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3D91862AA5B1EE00DBA3EF /* ProductSectionListItemView.swift */; };
 		AF3D91892AA5B29600DBA3EF /* ProductSectionEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3D91882AA5B29600DBA3EF /* ProductSectionEditView.swift */; };
@@ -92,8 +104,6 @@
 
 /* Begin PBXFileReference section */
 		AF095E3C2AB4EDE400A9D7DD /* ShopInListWatch Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ShopInListWatch Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		AF095E3E2AB4EDE400A9D7DD /* ShopInListWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopInListWatchApp.swift; sourceTree = "<group>"; };
-		AF095E402AB4EDE400A9D7DD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		AF095E422AB4EDE500A9D7DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF095E452AB4EDE500A9D7DD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AF095E4B2AB4EDE500A9D7DD /* ShopInListWatch Watch AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ShopInListWatch Watch AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -178,8 +188,6 @@
 		AF095E3D2AB4EDE400A9D7DD /* ShopInListWatch Watch App */ = {
 			isa = PBXGroup;
 			children = (
-				AF095E3E2AB4EDE400A9D7DD /* ShopInListWatchApp.swift */,
-				AF095E402AB4EDE400A9D7DD /* ContentView.swift */,
 				AF095E422AB4EDE500A9D7DD /* Assets.xcassets */,
 				AF095E442AB4EDE500A9D7DD /* Preview Content */,
 			);
@@ -567,8 +575,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF095E412AB4EDE400A9D7DD /* ContentView.swift in Sources */,
-				AF095E3F2AB4EDE400A9D7DD /* ShopInListWatchApp.swift in Sources */,
+				AF095E6F2AB4F1C600A9D7DD /* ShopInListApp.swift in Sources */,
+				AF095E702AB4F1C600A9D7DD /* SectionList.swift in Sources */,
+				AF095E6B2AB4F1C600A9D7DD /* ProductSectionListItemView.swift in Sources */,
+				AF095E762AB4F1C600A9D7DD /* ProductSection.swift in Sources */,
+				AF095E712AB4F1C600A9D7DD /* ProductListItemView.swift in Sources */,
+				AF095E6D2AB4F1C600A9D7DD /* MainView.swift in Sources */,
+				AF095E6A2AB4F1C500A9D7DD /* ProductList.swift in Sources */,
+				AF095E7A2AB4FD9600A9D7DD /* EditView.swift in Sources */,
+				AF095E722AB4F1C600A9D7DD /* DebugMenuViewController.swift in Sources */,
+				AF095E6E2AB4F1C600A9D7DD /* Group.swift in Sources */,
+				AF095E7B2AB4FE3C00A9D7DD /* ProductSectionEditView.swift in Sources */,
+				AF095E6C2AB4F1C600A9D7DD /* ProductImage.swift in Sources */,
+				AF095E772AB4F1C600A9D7DD /* Product.swift in Sources */,
+				AF095E782AB4F1C600A9D7DD /* Mall.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -674,6 +694,7 @@
 				INFOPLIST_KEY_CFBundleDisplayName = ShopInListWatch;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = qqq.ShopInList;
+				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -704,6 +725,7 @@
 				INFOPLIST_KEY_CFBundleDisplayName = ShopInListWatch;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = qqq.ShopInList;
+				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

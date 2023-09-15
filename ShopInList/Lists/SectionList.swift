@@ -41,11 +41,13 @@ struct SectionList: View {
             })
         }
         .toolbar {
+#if os(iOS)
             ToolbarItem(placement: .navigationBarTrailing) {
                 Button(action: doneAction) {
                     Label("Done", systemImage: "done")
                 }
             }
+#endif
             ToolbarItem() {
                 Button(action: addItem) {
                     Label("Add Item", systemImage: "plus")

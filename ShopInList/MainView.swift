@@ -27,12 +27,14 @@ struct MainView: View {
                 ProductList(products: productsWithoutSection).tag(productSections.count)
             }
             .tabViewStyle(.page)
-            .indexViewStyle(.page(backgroundDisplayMode: .always))
+            .indexViewStyle(.page(backgroundDisplayMode: .automatic))
 //            .navigationTitle("Products")
             .toolbar {
+#if os(iOS)
                 ToolbarItem(placement: .navigationBarTrailing) {
                     EditButton()
                 }
+#endif
                 ToolbarItem {
                     Button(action: addItem) {
                         Label("Add Item", systemImage: "plus")
