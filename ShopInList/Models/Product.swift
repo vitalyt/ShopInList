@@ -10,15 +10,16 @@ import SwiftData
 
 @Model
 final class Product {
-    var name: String
+    var name: String = ""
     var order: Int = 0
-    var timestamp: Date
+    var timestamp: Date = Date()
     var count: UInt = 1
     var isSelected: Bool = false
     var price: Double? = nil
-    var image: ProductImage? = nil
-    var section: ProductSection?
     
+    @Relationship var image: ProductImage?
+    @Relationship var section: ProductSection?
+                                                    
     init(name: String, timestamp: Date = Date()) {
         self.name = name
         self.timestamp = timestamp

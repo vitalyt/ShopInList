@@ -10,7 +10,7 @@ import SwiftData
 
 @Model
 final class Mall {
-    let name: String
+    let name: String = ""
     
     init(name: String) {
         self.name = name

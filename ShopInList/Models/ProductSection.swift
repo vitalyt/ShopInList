@@ -11,12 +11,13 @@ import SwiftData
 
 @Model
 final class ProductSection {
-    var name: String
+    var name: String = ""
     var order: Int = 0
     var isSelected: Bool = false
-    var image: ProductImage? = nil
-    var timestamp: Date
-    var products: [Product] = []
+    var timestamp: Date = Date()
+    @Relationship var image: ProductImage?
+//    @Relationship var products: [Product]?
+    @Relationship(inverse:\Product.section) var products: [Product]?
     
     init(name: String, timestamp: Date = Date()) {
         self.name = name

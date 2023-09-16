@@ -22,7 +22,7 @@ struct MainView: View {
         NavigationSplitView {
             TabView(selection: $selectedItem) {
                 ForEach(0..<productSections.count, id: \.self) { index in
-                    ProductList(products: productSections[index].products).tag(index)
+                    ProductList(products: productSections[index].products ?? []).tag(index)
                 }
                 ProductList(products: productsWithoutSection).tag(productSections.count)
             }

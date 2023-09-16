@@ -10,7 +10,7 @@ import SwiftData
 
 @Model
 final class Group {
-    let name: String
+    let name: String = ""
     var isSelected: Bool = false
     var sections: [ProductSection] = []
     
