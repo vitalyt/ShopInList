@@ -12,7 +12,7 @@ import SwiftData
 final class Group {
     let name: String = ""
     var isSelected: Bool = false
-    var sections: [ProductSection] = []
+//    var sections: [ProductSection] = []
     
     init(name: String) {
         self.name = name

@@ -58,9 +58,9 @@ struct ProductList: View {
 
     private func delete(items: [Product], offsets: IndexSet) {
         withAnimation(.easeInOut, {
-            for index in offsets {
-                modelContext.delete(items[index])
-            }
+//            for index in offsets {
+//                modelContext.delete(items[index])
+//            }
         })
     }
     
@@ -75,8 +75,8 @@ struct ProductList: View {
     }
 }
 
-#Preview {
-    MainView()
-        .modelContainer(for: Product.self, inMemory: true)
-}
+//#Preview {
+//    MainView()
+//        .modelContainer(for: Product.self, inMemory: true)
+//}
 
