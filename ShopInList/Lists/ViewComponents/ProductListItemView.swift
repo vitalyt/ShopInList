@@ -32,6 +32,9 @@ struct ProductListItemView: View {
             .buttonStyle(.plain)
             .onChange(of: isOn) {
                 model.isSelected = isOn
+#if os(iOS)
+            UINotificationFeedbackGenerator().notificationOccurred(.success)
+#endif
             }
             Text(model.name)
             if let imageData = model.image?.imageData,
