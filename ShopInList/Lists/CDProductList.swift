@@ -9,51 +9,58 @@ import SwiftUI
 import SwiftData
 
 struct CDProductList: View {
-//    @Environment(\.modelContext) private var modelContext
     @Environment(\.managedObjectContext) private var managedObjectContext
     
-    @FetchRequest(sortDescriptors: [SortDescriptor(\.name)]) var products: FetchedResults<CDProduct>
-//    @Query(sort: \CDProduct.name) private var products: [CDProduct]
+//    let products: [CDProduct]
+//    @FetchRequest(sortDescriptors: [SortDescriptor(\.name)]) var products: FetchedResults<CDProduct>
+//    private var filteredFetchRequest: FetchRequest<CDProduct>
+    @FetchRequest private var products: FetchedResults<CDProduct>
+    
+    private static let sortDescriptors: [SortDescriptor<CDProduct>] = [SortDescriptor(\CDProduct.order, order: .forward), SortDescriptor(\CDProduct.timestamp, order: .reverse)]
+    
+    init(predicate: NSPredicate?) {
+        self._products = FetchRequest<CDProduct>(sortDescriptors: Self.sortDescriptors, predicate: predicate)
+    }
     
     var body: some View {
+        let items = products.filter({ !$0.isSelected }).sorted(using: Self.sortDescriptors)
+        let selectedItems = products.filter({ $0.isSelected }).sorted(using: Self.sortDescriptors)
         
-        NavigationSplitView {
-            List {
-                Section(header: Text("Products")) {
-                    ForEach(products) { item in
-                        NavigationLink {
-                            CDEditView(model: item)
-                        } label: {
-                            CDProductListItemView(model: item)
-                        }
+        List {
+            Section(header: Text("Products")) {
+                ForEach(items) { item in
+                    NavigationLink {
+                        CDEditView(model: item)
+                    } label: {
+                        CDProductListItemView(model: item)
                     }
-                    .onDelete(perform: { offsets in
-                        delete(items: Array<CDProduct>(products), offsets: offsets)
-                    })
-                    .onMove { offsets, index in
-                        moveItems(items: Array<CDProduct>(products), offsets: offsets, index: Int64(index))
-                    }
+                }
+                .onDelete(perform: { offsets in
+                    delete(items: items, offsets: offsets)
+                })
+                .onMove { offsets, index in
+                    moveItems(items: items, offsets: offsets, index: Int64(index))
                 }
             }
-            .navigationTitle(products.first?.section?.name ?? "Unknown")
-            .toolbar {
-                ToolbarItem {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
+            Section(header: Text("Selected Products")) {
+                ForEach(selectedItems) { item in
+                    NavigationLink {
+#if os(iOS)
+                        CDEditView(model: item)
+#endif
+                    } label: {
+                        CDProductListItemView(model: item)
                     }
-                    
                 }
-                ToolbarItem {
-                    Button(action: share) {
-                        Label("Share", systemImage: "share")
-                    }
-                    
+                .onDelete(perform: { offsets in
+                    delete(items: selectedItems, offsets: offsets)
+                })
+                .onMove { offsets, index in
+                    moveItems(items: selectedItems, offsets: offsets, index: Int64(index))
                 }
+                
             }
-        } detail: {
-            Text("Select an item")
-        }
-        
+        }.navigationTitle(products.first?.section?.name ?? "Unknown")
     }
 
     private func share() {

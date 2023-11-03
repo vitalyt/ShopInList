@@ -25,7 +25,8 @@ struct ShopInListApp: App {
 
     var body: some Scene {
         WindowGroup {
-            CDProductList()
+            CDMainView()
+//            CDProductList()
         }
         .environment(\.managedObjectContext, CoreDataStack.shared.context)
 //        .modelContainer(sharedModelContainer)

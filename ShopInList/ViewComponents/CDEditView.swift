@@ -71,13 +71,14 @@ struct CDEditView: View {
             
             HStack {
                 Text("Section:")
-//                NavigationLink {
-//                    CDSectionList(model: model, didSelect: { section in
-//                        self.model.section = section
-//                    }).modelContext(model.modelContext!)
-//                } label: {
-//                    Text(model.section?.name ?? "------")
-//                }
+                NavigationLink {
+                    CDSectionList(model: model, didSelect: { section in
+                        self.model.section = section
+                        CoreDataStack.shared.save()
+                    })
+                } label: {
+                    Text(model.section?.name ?? "------")
+                }
             }
         }
 #if os(iOS)

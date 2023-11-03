@@ -32,6 +32,7 @@ struct CDProductListItemView: View {
             .buttonStyle(.plain)
             .onChange(of: isOn) {
                 model.isSelected = isOn
+                CoreDataStack.shared.save()
 #if os(iOS)
                 UINotificationFeedbackGenerator().notificationOccurred(.success)
 #endif
