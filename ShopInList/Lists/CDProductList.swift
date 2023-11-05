@@ -35,12 +35,14 @@ struct CDProductList: View {
                         CDProductListItemView(model: item)
                     }
                 }
+#if os(iOS)
                 .onDelete(perform: { offsets in
                     delete(items: items, offsets: offsets)
                 })
                 .onMove { offsets, index in
                     moveItems(items: items, offsets: offsets, index: Int64(index))
                 }
+#endif
             }
             Section(header: Text("Selected Products")) {
                 ForEach(selectedItems) { item in
@@ -52,18 +54,19 @@ struct CDProductList: View {
                         CDProductListItemView(model: item)
                     }
                 }
+#if os(iOS)
                 .onDelete(perform: { offsets in
                     delete(items: selectedItems, offsets: offsets)
                 })
                 .onMove { offsets, index in
                     moveItems(items: selectedItems, offsets: offsets, index: Int64(index))
                 }
-                
+#endif
             }
         }.navigationTitle(products.first?.section?.name ?? "Unknown")
     }
 
-    private func share() {
+    private func getShare() {
         withAnimation {
             guard let product = products.last else { return }
             let _ = CoreDataStack.shared.getShare(product)

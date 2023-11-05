@@ -105,6 +105,13 @@ extension CoreDataStack {
       self.save()
     }
   }
+    
+  func delete(_ destination: CDProductSection) {
+    context.perform {
+      self.context.delete(destination)
+      self.save()
+    }
+  }
 }
 
 // MARK: Share a record from Core Data
