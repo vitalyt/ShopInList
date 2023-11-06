@@ -33,84 +33,95 @@ struct CDEditView: View {
     }
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 10) {
-            if let imageData = model.image?.imageData,
-               let uiImage = UIImage(data: imageData) {
-                Image(uiImage: uiImage)
-                    .resizable()
-                    .scaledToFill()
-                    .frame(width: 250, height: 250)
-                    .cornerRadius(10)
-            }
-            
-            PhotosPicker(selection: $selectedItem) {
-                Image(systemName: "photo")
-                    .font(.headline)
-                Text("Change Image").font(.headline)
-            }
-            .onChange(of: selectedItem) {
-                Task {
-                    // Retrive selected asset in the form of Data
-                    if let data = try? await selectedItem?.loadTransferable(type: Data.self) {
-                        selectedImageData = data
-                        let image = CDProductImage(context: CoreDataStack.shared.context)
-                        image.imageData = data
-                        model.image = image
-                        try? CoreDataStack.shared.context.save()
-                    }
-                }
-            }
-            
-            HStack {
-                Text("Name:")
-                TextField(model.name!, text: $productName, onCommit: {
-                    model.name = productName
-                    try? CoreDataStack.shared.context.save()
-                })
-            }
-            
-            HStack {
-                Text("Section:")
-                NavigationLink {
-                    CDSectionList(model: model, didSelect: { section in
-                        self.model.section = section
-                        CoreDataStack.shared.save()
-                    })
-                } label: {
-                    Text(model.section?.name ?? "------")
-                }
-            }
-            
-            Spacer()
-        }
-#if os(iOS)
-        .textFieldStyle(RoundedBorderTextFieldStyle())
+        ScrollView {
+            VStack(alignment: .leading, spacing: 10) {
+                if let imageData = model.image?.imageData,
+                   let uiImage = UIImage(data: imageData) {
+                    Image(uiImage: uiImage)
+                        .resizable()
+                        .scaledToFill()
+#if os(watchOS)
+                        .frame(width: 200, height: 200)
+                        .onTapGesture(count: 2) {
+                            model.isSelected = !model.isSelected
+                            try? CoreDataStack.shared.context.save()
+                            dismiss()
+                        }
+#else
+                        .frame(width: 250, height: 250)
 #endif
-        .padding()
-        .navigationBarBackButtonHidden(false)
-        .navigationTitle(model.name!)
-#if os(iOS)
-        .toolbar {
-            ToolbarItem() {
-                if !stack.isShared(object: model) {
-                    Button {
-                        Task {
-                            await createShare(model)
+                        .cornerRadius(10)
+                }
+                
+                PhotosPicker(selection: $selectedItem) {
+                    Image(systemName: "photo")
+                        .font(.headline)
+                    Text("Change Image").font(.headline)
+                }
+                .onChange(of: selectedItem) {
+                    Task {
+                        // Retrive selected asset in the form of Data
+                        if let data = try? await selectedItem?.loadTransferable(type: Data.self) {
+                            selectedImageData = data
+                            let image = CDProductImage(context: CoreDataStack.shared.context)
+                            image.imageData = data
+                            model.image = image
                             try? CoreDataStack.shared.context.save()
                         }
-                        showShareSheet = true
+                    }
+                }
+                
+                HStack {
+                    Text("Name:")
+                    TextField(model.name!, text: $productName, onCommit: {
+                        model.name = productName
+                        try? CoreDataStack.shared.context.save()
+                    })
+                }
+                
+                HStack {
+                    Text("Section:")
+                    NavigationLink {
+                        CDSectionList(model: model, didSelect: { section in
+                            self.model.section = section
+                            CoreDataStack.shared.save()
+                        })
                     } label: {
-                        Image(systemName: "square.and.arrow.up")
+                        Text(model.section?.name ?? "------")
+                    }
+                }
+                
+                Spacer()
+            }
+#if os(iOS)
+            .textFieldStyle(RoundedBorderTextFieldStyle())
+#endif
+            .padding()
+            .navigationBarBackButtonHidden(false)
+            .navigationTitle(model.name!)
+#if os(iOS)
+            .toolbar {
+                ToolbarItem() {
+                    if !stack.isShared(object: model) {
+                        Button {
+                            Task {
+                                await createShare(model)
+                                try? CoreDataStack.shared.context.save()
+                            }
+                            showShareSheet = true
+                        } label: {
+                            Image(systemName: "square.and.arrow.up")
+                        }
                     }
                 }
             }
-        }
-        .sheet(isPresented: $showShareSheet, content: {
-            if let share = share {
-                CloudSharingView(share: share, container: stack.ckContainer, model: model)
-            }
-        })
+            .sheet(isPresented: $showShareSheet, content: {
+                if let share = share {
+                    CloudSharingView(share: share, container: stack.ckContainer, model: model)
+                }
+            })
 #endif
+        }
     }
     
 }
