@@ -80,6 +80,8 @@ struct CDEditView: View {
                     Text(model.section?.name ?? "------")
                 }
             }
+            
+            Spacer()
         }
 #if os(iOS)
         .textFieldStyle(RoundedBorderTextFieldStyle())

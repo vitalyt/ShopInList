@@ -54,23 +54,5 @@ struct CDMainView: View {
             CoreDataStack.shared.save()
         }
     }
-
-    private func delete(items: [CDProduct], offsets: IndexSet) {
-        withAnimation {
-            for index in offsets {
-                managedObjectContext.delete(items[index])
-            }
-        }
-    }
-    
-    private func moveItems(items: [CDProduct], offsets: IndexSet, index: Int) {
-        withAnimation {
-            var items = items
-            items.move(fromOffsets: offsets, toOffset: index)
-            for (index, item) in items.enumerated() {
-                item.order = Int64(index)
-            }
-        }
-    }
 }
 

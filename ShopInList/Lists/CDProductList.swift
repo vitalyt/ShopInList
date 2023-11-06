@@ -10,11 +10,8 @@ import SwiftData
 
 struct CDProductList: View {
     @Environment(\.managedObjectContext) private var managedObjectContext
-    
-//    let products: [CDProduct]
-//    @FetchRequest(sortDescriptors: [SortDescriptor(\.name)]) var products: FetchedResults<CDProduct>
-//    private var filteredFetchRequest: FetchRequest<CDProduct>
     @FetchRequest private var products: FetchedResults<CDProduct>
+    @State private var showingAlert = false
     
     private static let sortDescriptors: [SortDescriptor<CDProduct>] = [SortDescriptor(\CDProduct.order, order: .forward), SortDescriptor(\CDProduct.timestamp, order: .reverse)]
     
@@ -26,21 +23,29 @@ struct CDProductList: View {
         let items = products.filter({ !$0.isSelected }).sorted(using: Self.sortDescriptors)
         let selectedItems = products.filter({ $0.isSelected }).sorted(using: Self.sortDescriptors)
         
-        List {
-            Section(header: Text("Products")) {
+        List() {
+            Section( header: Text("Products")) {
                 ForEach(items) { item in
                     NavigationLink {
                         CDEditView(model: item)
                     } label: {
                         CDProductListItemView(model: item)
                     }
+#if os(iOS)
+                    .swipeActions(edge: .trailing) {
+                        deleteButton(item: item)
+                    }
+                    .alert(isPresented:$showingAlert) {
+                        deleteAlert(item: item)
+                    }
+#endif
                 }
 #if os(iOS)
                 .onDelete(perform: { offsets in
-                    delete(items: items, offsets: offsets)
+                    delete(items: selectedItems, offsets: offsets)
                 })
                 .onMove { offsets, index in
-                    moveItems(items: items, offsets: offsets, index: Int64(index))
+                    moveItems(items: selectedItems, offsets: offsets, index: Int64(index))
                 }
 #endif
             }
@@ -53,6 +58,14 @@ struct CDProductList: View {
                     } label: {
                         CDProductListItemView(model: item)
                     }
+#if os(iOS)
+                    .swipeActions(edge: .trailing) {
+                        deleteButton(item: item)
+                    }
+                    .alert(isPresented:$showingAlert) {
+                        deleteAlert(item: item)
+                    }
+#endif
                 }
 #if os(iOS)
                 .onDelete(perform: { offsets in
@@ -84,10 +97,38 @@ struct CDProductList: View {
     private func delete(items: [CDProduct], offsets: IndexSet) {
         withAnimation(.easeInOut, {
             for index in offsets {
-                managedObjectContext.delete(items[index])
-                CoreDataStack.shared.save()
+                delete(item: items[index])
             }
         })
+    }
+    
+    private func delete(item: CDProduct) {
+        withAnimation(.easeInOut, {
+            managedObjectContext.delete(item)
+            CoreDataStack.shared.save()
+        })
+    }
+    
+    private func deleteButton(item: CDProduct) -> Button <Label<Text, Image>> {
+        Button(role: .destructive, action: {
+            if item.section != nil {
+                showingAlert = true
+            } else {
+                delete(item: item)
+            }
+        } ) {
+            Label("Delete!", systemImage: "trash")
+        }
+    }
+    
+    private func deleteAlert(item: CDProduct) -> Alert {
+        Alert(
+            title: Text("Are you sure you want to delete this?"),
+            primaryButton: .destructive(Text("Delete")) {
+                delete(item: item)
+            },
+            secondaryButton: .cancel()
+        )
     }
     
     private func moveItems(items: [CDProduct], offsets: IndexSet, index: Int64) {
@@ -100,9 +141,3 @@ struct CDProductList: View {
         }
     }
 }
-
-//#Preview {
-//    ProductListNew()
-//        .modelContainer(for: Product.self, inMemory: true)
-//}
-//
