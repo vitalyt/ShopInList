@@ -90,16 +90,16 @@ struct CDEditView: View {
 #if os(iOS)
         .toolbar {
             ToolbarItem() {
-                Button {
-                    if !stack.isShared(object: model) {
+                if !stack.isShared(object: model) {
+                    Button {
                         Task {
                             await createShare(model)
                             try? CoreDataStack.shared.context.save()
                         }
+                        showShareSheet = true
+                    } label: {
+                        Image(systemName: "square.and.arrow.up")
                     }
-                    showShareSheet = true
-                } label: {
-                    Image(systemName: "square.and.arrow.up")
                 }
             }
         }
