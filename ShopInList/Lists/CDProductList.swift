@@ -13,6 +13,8 @@ struct CDProductList: View {
     @FetchRequest private var products: FetchedResults<CDProduct>
     @State private var showingAlert = false
     
+    @State private var confettiCounter: Int = 0
+    
     private static let sortDescriptors: [SortDescriptor<CDProduct>] = [SortDescriptor(\CDProduct.order, order: .forward), SortDescriptor(\CDProduct.timestamp, order: .reverse)]
     
     init(predicate: NSPredicate?) {
@@ -29,7 +31,7 @@ struct CDProductList: View {
                     NavigationLink {
                         CDEditView(model: item)
                     } label: {
-                        CDProductListItemView(model: item)
+                        CDProductListItemView(model: item, confettiCounter: $confettiCounter)
                     }
 //#if os(iOS)
 //                    .swipeActions(edge: .trailing) {
@@ -52,11 +54,9 @@ struct CDProductList: View {
             Section(header: Text("Done")) {
                 ForEach(selectedItems) { item in
                     NavigationLink {
-#if os(iOS)
                         CDEditView(model: item)
-#endif
                     } label: {
-                        CDProductListItemView(model: item)
+                        CDProductListItemView(model: item, confettiCounter: $confettiCounter)
                     }
 //#if os(iOS)
 //                    .swipeActions(edge: .trailing) {
@@ -76,7 +76,13 @@ struct CDProductList: View {
                 }
 #endif
             }
-        }.navigationTitle(products.first?.section?.name ?? "Unknown")
+        }
+#if os(iOS)
+        .confettiCannon(counter: $confettiCounter, num: 75, radius: 500)
+#elseif os(watchOS)
+        .confettiCannon(counter: $confettiCounter, num: 50, openingAngle: Angle(degrees: 0), closingAngle: Angle(degrees: 360), radius: 200)
+#endif
+        .navigationTitle(products.first?.section?.name ?? "Unknown")
     }
 
     private func getShare() {

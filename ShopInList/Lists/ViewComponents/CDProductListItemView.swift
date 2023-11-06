@@ -12,11 +12,13 @@ struct CDProductListItemView: View {
     var model: CDProduct
     
     @State private var isOn: Bool
+    @Binding var confettiCounter: Int
     private let heightCell = 44.0
     
-    init(model: CDProduct) {
+    init(model: CDProduct, confettiCounter: Binding<Int>) {
         self.model = model
-        isOn = model.isSelected
+        self.isOn = model.isSelected
+        self._confettiCounter = confettiCounter
     }
     
     var body: some View {
@@ -33,8 +35,13 @@ struct CDProductListItemView: View {
             .onChange(of: isOn) {
                 model.isSelected = isOn
                 CoreDataStack.shared.save()
+                if isOn {
+                    confettiCounter += 1
+                }
 #if os(iOS)
                 UINotificationFeedbackGenerator().notificationOccurred(.success)
+#elseif os(watchOS)
+                WKInterfaceDevice.current().play(.success)
 #endif
             }
             Text(model.name!)

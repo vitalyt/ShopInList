@@ -54,6 +54,10 @@
 		AF8B9D092AF55E3D0031829F /* CDProductSectionListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8B9D082AF55E3D0031829F /* CDProductSectionListItemView.swift */; };
 		AF8B9D0A2AF55E3D0031829F /* CDProductSectionListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8B9D082AF55E3D0031829F /* CDProductSectionListItemView.swift */; };
 		AFC9400C2AF8334F00D86B21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC9400B2AF8334F00D86B21 /* AppDelegate.swift */; };
+		AFC940252AF945C000D86B21 /* ConfettiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC940242AF945C000D86B21 /* ConfettiView.swift */; };
+		AFC940272AF946CA00D86B21 /* View+ConfettiCannon.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC940262AF946CA00D86B21 /* View+ConfettiCannon.swift */; };
+		AFC940282AF9485000D86B21 /* View+ConfettiCannon.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC940262AF946CA00D86B21 /* View+ConfettiCannon.swift */; };
+		AFC940292AF9485000D86B21 /* ConfettiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC940242AF945C000D86B21 /* ConfettiView.swift */; };
 		AFDF02442AA4A575009E1A28 /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDF02432AA4A575009E1A28 /* EditView.swift */; };
 		AFDF02462AA4ACCA009E1A28 /* ProductImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDF02452AA4ACCA009E1A28 /* ProductImage.swift */; };
 		AFDF02482AA4AF61009E1A28 /* ImagePicherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDF02472AA4AF61009E1A28 /* ImagePicherView.swift */; };
@@ -151,6 +155,8 @@
 		AF8B9D052AF55D4D0031829F /* CDProductSectionEditView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDProductSectionEditView.swift; sourceTree = "<group>"; };
 		AF8B9D082AF55E3D0031829F /* CDProductSectionListItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDProductSectionListItemView.swift; sourceTree = "<group>"; };
 		AFC9400B2AF8334F00D86B21 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AFC940242AF945C000D86B21 /* ConfettiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfettiView.swift; sourceTree = "<group>"; };
+		AFC940262AF946CA00D86B21 /* View+ConfettiCannon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View+ConfettiCannon.swift"; sourceTree = "<group>"; };
 		AFDF02432AA4A575009E1A28 /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
 		AFDF02452AA4ACCA009E1A28 /* ProductImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductImage.swift; sourceTree = "<group>"; };
 		AFDF02472AA4AF61009E1A28 /* ImagePicherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicherView.swift; sourceTree = "<group>"; };
@@ -277,6 +283,8 @@
 				AF8B9D052AF55D4D0031829F /* CDProductSectionEditView.swift */,
 				AFDF02472AA4AF61009E1A28 /* ImagePicherView.swift */,
 				AF4D8C332AB38A270096ADBA /* ImagePicker.swift */,
+				AFC940262AF946CA00D86B21 /* View+ConfettiCannon.swift */,
+				AFC940242AF945C000D86B21 /* ConfettiView.swift */,
 			);
 			path = ViewComponents;
 			sourceTree = "<group>";
@@ -638,6 +646,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFC940282AF9485000D86B21 /* View+ConfettiCannon.swift in Sources */,
+				AFC940292AF9485000D86B21 /* ConfettiView.swift in Sources */,
 				AF8B9D0A2AF55E3D0031829F /* CDProductSectionListItemView.swift in Sources */,
 				AF74C55D2AC4CF28005B04B0 /* CDEditView.swift in Sources */,
 				AF74C5512AC4BE6E005B04B0 /* CoreDataStack.swift in Sources */,
@@ -686,6 +696,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFC940252AF945C000D86B21 /* ConfettiView.swift in Sources */,
 				AF8B9D092AF55E3D0031829F /* CDProductSectionListItemView.swift in Sources */,
 				AF74C5562AC4C67E005B04B0 /* CDProductListItemView.swift in Sources */,
 				AF3D91872AA5B1EE00DBA3EF /* ProductSectionListItemView.swift in Sources */,
@@ -702,6 +713,7 @@
 				AFF5EED02AA2216700B840A4 /* ShopInListApp.swift in Sources */,
 				AF8B9D062AF55D4D0031829F /* CDProductSectionEditView.swift in Sources */,
 				AF74C55F2AC4D36C005B04B0 /* CloudSharingController.swift in Sources */,
+				AFC940272AF946CA00D86B21 /* View+ConfettiCannon.swift in Sources */,
 				AFDF02482AA4AF61009E1A28 /* ImagePicherView.swift in Sources */,
 				AF3D91892AA5B29600DBA3EF /* ProductSectionEditView.swift in Sources */,
 				AF74C54B2AC4B0F0005B04B0 /* CoreDataStack.swift in Sources */,
@@ -1073,7 +1085,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ShopInList/Preview Content\"";
-				DEVELOPMENT_TEAM = HJLHKX7H2T;
+				DEVELOPMENT_TEAM = VV53US7R3M;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ShopInList/Info.plist;
