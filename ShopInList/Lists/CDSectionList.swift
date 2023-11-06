@@ -15,7 +15,7 @@ struct CDSectionList: View {
     @Environment(\.managedObjectContext) private var managedObjectContext
     @Environment(\.dismiss) private var dismiss
     
-    static let sortDescriptors: [SortDescriptor<CDProductSection>] = [SortDescriptor(\CDProductSection.timestamp, order: .reverse)]
+    static let sortDescriptors: [SortDescriptor<CDProductSection>] = [SortDescriptor(\CDProductSection.order, order: .forward), SortDescriptor(\CDProductSection.timestamp, order: .reverse)]
     @FetchRequest(sortDescriptors: sortDescriptors) private var items: FetchedResults<CDProductSection>
     
     init(model: CDProduct, didSelect: ((_ item: CDProductSection) -> Void)? = nil) {
@@ -36,9 +36,14 @@ struct CDSectionList: View {
                     }
                 }
             }
+#if os(iOS)
             .onDelete(perform: { offsets in
                 delete(items: Array(items), offsets: offsets)
             })
+            .onMove { offsets, index in
+                moveItems(items: Array(items), offsets: offsets, index: Int64(index))
+            }
+#endif
         }
         .toolbar {
 #if os(iOS)
@@ -80,6 +85,16 @@ struct CDSectionList: View {
         withAnimation {
             for index in offsets {
                 managedObjectContext.delete(items[index])
+            }
+        }
+    }
+    
+    private func moveItems(items: [CDProductSection], offsets: IndexSet, index: Int64) {
+        withAnimation {
+            var items = items
+            items.move(fromOffsets: offsets, toOffset: Int(index))
+            for (index, item) in items.enumerated() {
+                item.order = Int64(index)
             }
         }
     }

@@ -31,25 +31,25 @@ struct CDProductList: View {
                     } label: {
                         CDProductListItemView(model: item)
                     }
-#if os(iOS)
-                    .swipeActions(edge: .trailing) {
-                        deleteButton(item: item)
-                    }
-                    .alert(isPresented:$showingAlert) {
-                        deleteAlert(item: item)
-                    }
-#endif
+//#if os(iOS)
+//                    .swipeActions(edge: .trailing) {
+//                        deleteButton(item: item)
+//                    }
+//                    .alert(isPresented:$showingAlert) {
+//                        deleteAlert(item: item)
+//                    }
+//#endif
                 }
 #if os(iOS)
                 .onDelete(perform: { offsets in
-                    delete(items: selectedItems, offsets: offsets)
+                    delete(items: items, offsets: offsets)
                 })
                 .onMove { offsets, index in
-                    moveItems(items: selectedItems, offsets: offsets, index: Int64(index))
+                    moveItems(items: items, offsets: offsets, index: Int64(index))
                 }
 #endif
             }
-            Section(header: Text("Selected Products")) {
+            Section(header: Text("Done")) {
                 ForEach(selectedItems) { item in
                     NavigationLink {
 #if os(iOS)
@@ -58,14 +58,14 @@ struct CDProductList: View {
                     } label: {
                         CDProductListItemView(model: item)
                     }
-#if os(iOS)
-                    .swipeActions(edge: .trailing) {
-                        deleteButton(item: item)
-                    }
-                    .alert(isPresented:$showingAlert) {
-                        deleteAlert(item: item)
-                    }
-#endif
+//#if os(iOS)
+//                    .swipeActions(edge: .trailing) {
+//                        deleteButton(item: item)
+//                    }
+//                    .alert(isPresented:$showingAlert) {
+//                        deleteAlert(item: item)
+//                    }
+//#endif
                 }
 #if os(iOS)
                 .onDelete(perform: { offsets in

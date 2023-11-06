@@ -13,7 +13,7 @@ struct CDMainView: View {
     
     @State private var selectedItem = 0
     
-    @FetchRequest(sortDescriptors: [SortDescriptor(\.name)]) private var productSections: FetchedResults<CDProductSection>
+    @FetchRequest(sortDescriptors: [SortDescriptor(\CDProductSection.order, order: .forward), SortDescriptor(\CDProductSection.timestamp, order: .reverse)]) private var productSections: FetchedResults<CDProductSection>
     @FetchRequest(sortDescriptors: [SortDescriptor(\.name)]) private var productsWithoutSection: FetchedResults<CDProduct>
     
     var body: some View {
@@ -27,18 +27,18 @@ struct CDMainView: View {
             .tabViewStyle(.page)
             .indexViewStyle(.page(backgroundDisplayMode: .automatic))
 //            .navigationTitle("Products")
-            .toolbar {
 #if os(iOS)
+            .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     EditButton()
                 }
-#endif
                 ToolbarItem {
                     Button(action: addItem) {
                         Label("Add Item", systemImage: "plus")
                     }
                 }
             }
+#endif
         } detail: {
             Text("Select an item")
         }
