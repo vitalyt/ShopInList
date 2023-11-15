@@ -42,15 +42,20 @@ struct CDEditView: View {
                         .scaledToFill()
 #if os(watchOS)
                         .frame(width: 200, height: 200)
-                        .onTapGesture(count: 2) {
-                            model.isSelected = !model.isSelected
-                            try? CoreDataStack.shared.context.save()
-                            dismiss()
-                        }
 #else
                         .frame(width: 250, height: 250)
 #endif
                         .cornerRadius(10)
+                        .onTapGesture(count: 2) {
+                            model.isSelected = !model.isSelected
+                            try? CoreDataStack.shared.context.save()
+#if os(iOS)
+                UINotificationFeedbackGenerator().notificationOccurred(.success)
+#elseif os(watchOS)
+                WKInterfaceDevice.current().play(.success)
+#endif
+                            dismiss()
+                        }
                 }
                 
                 PhotosPicker(selection: $selectedItem) {
@@ -114,6 +119,12 @@ struct CDEditView: View {
                         }
                     }
                 }
+                
+                ToolbarItem() {
+                    Button(action: delete) {
+                        Label("", systemImage: "trash")
+                    }
+                }
             }
             .sheet(isPresented: $showShareSheet, content: {
                 if let share = share {
@@ -124,6 +135,10 @@ struct CDEditView: View {
         }
     }
     
+    private func delete() {
+        CoreDataStack.shared.context.delete(model)
+        dismiss()
+    }
 }
 
 // MARK: Returns CKShare participant permission, methods and properties to share

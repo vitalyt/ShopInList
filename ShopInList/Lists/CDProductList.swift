@@ -33,19 +33,8 @@ struct CDProductList: View {
                     } label: {
                         CDProductListItemView(model: item, confettiCounter: $confettiCounter)
                     }
-//#if os(iOS)
-//                    .swipeActions(edge: .trailing) {
-//                        deleteButton(item: item)
-//                    }
-//                    .alert(isPresented:$showingAlert) {
-//                        deleteAlert(item: item)
-//                    }
-//#endif
                 }
 #if os(iOS)
-                .onDelete(perform: { offsets in
-                    delete(items: items, offsets: offsets)
-                })
                 .onMove { offsets, index in
                     moveItems(items: items, offsets: offsets, index: Int64(index))
                 }
@@ -58,19 +47,8 @@ struct CDProductList: View {
                     } label: {
                         CDProductListItemView(model: item, confettiCounter: $confettiCounter)
                     }
-//#if os(iOS)
-//                    .swipeActions(edge: .trailing) {
-//                        deleteButton(item: item)
-//                    }
-//                    .alert(isPresented:$showingAlert) {
-//                        deleteAlert(item: item)
-//                    }
-//#endif
                 }
 #if os(iOS)
-                .onDelete(perform: { offsets in
-                    delete(items: selectedItems, offsets: offsets)
-                })
                 .onMove { offsets, index in
                     moveItems(items: selectedItems, offsets: offsets, index: Int64(index))
                 }
@@ -78,7 +56,7 @@ struct CDProductList: View {
             }
         }
 #if os(iOS)
-        .confettiCannon(counter: $confettiCounter, num: 75, radius: 500)
+        .confettiCannon(counter: $confettiCounter, num: 75, confettis: [.text("💵"), .text("💶"), .text("💷"), .text("💴")], radius: 500)
 #elseif os(watchOS)
         .confettiCannon(counter: $confettiCounter, num: 50, openingAngle: Angle(degrees: 0), closingAngle: Angle(degrees: 360), radius: 200)
 #endif
@@ -98,43 +76,6 @@ struct CDProductList: View {
             managedObjectContext.insert(newItem)
             CoreDataStack.shared.save()
         }
-    }
-    
-    private func delete(items: [CDProduct], offsets: IndexSet) {
-        withAnimation(.easeInOut, {
-            for index in offsets {
-                delete(item: items[index])
-            }
-        })
-    }
-    
-    private func delete(item: CDProduct) {
-        withAnimation(.easeInOut, {
-            managedObjectContext.delete(item)
-            CoreDataStack.shared.save()
-        })
-    }
-    
-    private func deleteButton(item: CDProduct) -> Button <Label<Text, Image>> {
-        Button(role: .destructive, action: {
-            if item.section != nil {
-                showingAlert = true
-            } else {
-                delete(item: item)
-            }
-        } ) {
-            Label("Delete!", systemImage: "trash")
-        }
-    }
-    
-    private func deleteAlert(item: CDProduct) -> Alert {
-        Alert(
-            title: Text("Are you sure you want to delete this?"),
-            primaryButton: .destructive(Text("Delete")) {
-                delete(item: item)
-            },
-            secondaryButton: .cancel()
-        )
     }
     
     private func moveItems(items: [CDProduct], offsets: IndexSet, index: Int64) {
