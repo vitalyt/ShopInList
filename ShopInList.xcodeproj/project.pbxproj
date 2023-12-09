@@ -53,6 +53,21 @@
 		AF8B9D072AF55D4D0031829F /* CDProductSectionEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8B9D052AF55D4D0031829F /* CDProductSectionEditView.swift */; };
 		AF8B9D092AF55E3D0031829F /* CDProductSectionListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8B9D082AF55E3D0031829F /* CDProductSectionListItemView.swift */; };
 		AF8B9D0A2AF55E3D0031829F /* CDProductSectionListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8B9D082AF55E3D0031829F /* CDProductSectionListItemView.swift */; };
+		AFA2A3F42B24D223008EAA75 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFA2A3F32B24D223008EAA75 /* WidgetKit.framework */; };
+		AFA2A3F62B24D223008EAA75 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFA2A3F52B24D223008EAA75 /* SwiftUI.framework */; };
+		AFA2A3F92B24D223008EAA75 /* ShopInListWidget_ExtensionBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA2A3F82B24D223008EAA75 /* ShopInListWidget_ExtensionBundle.swift */; };
+		AFA2A3FB2B24D223008EAA75 /* ShopInListWidget_ExtensionLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA2A3FA2B24D223008EAA75 /* ShopInListWidget_ExtensionLiveActivity.swift */; };
+		AFA2A3FD2B24D223008EAA75 /* ShopInListWidget_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA2A3FC2B24D223008EAA75 /* ShopInListWidget_Extension.swift */; };
+		AFA2A3FF2B24D223008EAA75 /* AppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA2A3FE2B24D223008EAA75 /* AppIntent.swift */; };
+		AFA2A4012B24D224008EAA75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFA2A4002B24D224008EAA75 /* Assets.xcassets */; };
+		AFA2A4052B24D224008EAA75 /* ShopInListWidget ExtensionExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = AFA2A3F12B24D223008EAA75 /* ShopInListWidget ExtensionExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		AFA2A40B2B24D6D8008EAA75 /* Mall.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF5EF042AA2250A00B840A4 /* Mall.swift */; };
+		AFA2A40C2B24D6D8008EAA75 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF5EF002AA2234F00B840A4 /* Group.swift */; };
+		AFA2A40D2B24D6D8008EAA75 /* ProductSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF5EF022AA2235F00B840A4 /* ProductSection.swift */; };
+		AFA2A40E2B24D6D8008EAA75 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF5EEFE2AA221DD00B840A4 /* Product.swift */; };
+		AFA2A40F2B24D6E1008EAA75 /* ProductImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDF02452AA4ACCA009E1A28 /* ProductImage.swift */; };
+		AFA2A4102B24D709008EAA75 /* ShopInList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AF74C54D2AC4B7B9005B04B0 /* ShopInList.xcdatamodeld */; };
+		AFA2A4112B24DA3C008EAA75 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF74C54A2AC4B0F0005B04B0 /* CoreDataStack.swift */; };
 		AFC9400C2AF8334F00D86B21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC9400B2AF8334F00D86B21 /* AppDelegate.swift */; };
 		AFC940252AF945C000D86B21 /* ConfettiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC940242AF945C000D86B21 /* ConfettiView.swift */; };
 		AFC940272AF946CA00D86B21 /* View+ConfettiCannon.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC940262AF946CA00D86B21 /* View+ConfettiCannon.swift */; };
@@ -97,6 +112,13 @@
 			remoteGlobalIDString = AF095E3B2AB4EDE400A9D7DD;
 			remoteInfo = "ShopInListWatch Watch App";
 		};
+		AFA2A4032B24D224008EAA75 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AFF5EEC42AA2216700B840A4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AFA2A3F02B24D223008EAA75;
+			remoteInfo = "ShopInListWidget ExtensionExtension";
+		};
 		AFF5EEE12AA2216800B840A4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = AFF5EEC42AA2216700B840A4 /* Project object */;
@@ -123,6 +145,17 @@
 				AF095E5F2AB4EDE500A9D7DD /* ShopInListWatch Watch App.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AFA2A4062B24D224008EAA75 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				AFA2A4052B24D224008EAA75 /* ShopInListWidget ExtensionExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -154,6 +187,16 @@
 		AF8B9CFF2AF55A2E0031829F /* CDSectionList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDSectionList.swift; sourceTree = "<group>"; };
 		AF8B9D052AF55D4D0031829F /* CDProductSectionEditView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDProductSectionEditView.swift; sourceTree = "<group>"; };
 		AF8B9D082AF55E3D0031829F /* CDProductSectionListItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDProductSectionListItemView.swift; sourceTree = "<group>"; };
+		AFA2A3F12B24D223008EAA75 /* ShopInListWidget ExtensionExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "ShopInListWidget ExtensionExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AFA2A3F32B24D223008EAA75 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		AFA2A3F52B24D223008EAA75 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		AFA2A3F82B24D223008EAA75 /* ShopInListWidget_ExtensionBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopInListWidget_ExtensionBundle.swift; sourceTree = "<group>"; };
+		AFA2A3FA2B24D223008EAA75 /* ShopInListWidget_ExtensionLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopInListWidget_ExtensionLiveActivity.swift; sourceTree = "<group>"; };
+		AFA2A3FC2B24D223008EAA75 /* ShopInListWidget_Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopInListWidget_Extension.swift; sourceTree = "<group>"; };
+		AFA2A3FE2B24D223008EAA75 /* AppIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIntent.swift; sourceTree = "<group>"; };
+		AFA2A4002B24D224008EAA75 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AFA2A4022B24D224008EAA75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AFA2A40A2B24D5DE008EAA75 /* ShopInListWidget ExtensionExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "ShopInListWidget ExtensionExtension.entitlements"; sourceTree = "<group>"; };
 		AFC9400B2AF8334F00D86B21 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFC940242AF945C000D86B21 /* ConfettiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfettiView.swift; sourceTree = "<group>"; };
 		AFC940262AF946CA00D86B21 /* View+ConfettiCannon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View+ConfettiCannon.swift"; sourceTree = "<group>"; };
@@ -198,6 +241,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AFA2A3EE2B24D223008EAA75 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AFA2A3F62B24D223008EAA75 /* SwiftUI.framework in Frameworks */,
+				AFA2A3F42B24D223008EAA75 /* WidgetKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,15 +393,40 @@
 			path = DebugMenu;
 			sourceTree = "<group>";
 		};
+		AFA2A3F22B24D223008EAA75 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AFA2A3F32B24D223008EAA75 /* WidgetKit.framework */,
+				AFA2A3F52B24D223008EAA75 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AFA2A3F72B24D223008EAA75 /* ShopInListWidget Extension */ = {
+			isa = PBXGroup;
+			children = (
+				AFA2A3F82B24D223008EAA75 /* ShopInListWidget_ExtensionBundle.swift */,
+				AFA2A3FA2B24D223008EAA75 /* ShopInListWidget_ExtensionLiveActivity.swift */,
+				AFA2A3FC2B24D223008EAA75 /* ShopInListWidget_Extension.swift */,
+				AFA2A3FE2B24D223008EAA75 /* AppIntent.swift */,
+				AFA2A4002B24D224008EAA75 /* Assets.xcassets */,
+				AFA2A4022B24D224008EAA75 /* Info.plist */,
+			);
+			path = "ShopInListWidget Extension";
+			sourceTree = "<group>";
+		};
 		AFF5EEC32AA2216700B840A4 = {
 			isa = PBXGroup;
 			children = (
+				AFA2A40A2B24D5DE008EAA75 /* ShopInListWidget ExtensionExtension.entitlements */,
 				AFF5EECE2AA2216700B840A4 /* ShopInList */,
 				AFF5EEE32AA2216800B840A4 /* ShopInListTests */,
 				AFF5EEED2AA2216800B840A4 /* ShopInListUITests */,
 				AF095E3D2AB4EDE400A9D7DD /* ShopInListWatch Watch App */,
 				AF095E4E2AB4EDE500A9D7DD /* ShopInListWatch Watch AppTests */,
 				AF095E582AB4EDE500A9D7DD /* ShopInListWatch Watch AppUITests */,
+				AFA2A3F72B24D223008EAA75 /* ShopInListWidget Extension */,
+				AFA2A3F22B24D223008EAA75 /* Frameworks */,
 				AFF5EECD2AA2216700B840A4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -363,6 +440,7 @@
 				AF095E3C2AB4EDE400A9D7DD /* ShopInListWatch Watch App.app */,
 				AF095E4B2AB4EDE500A9D7DD /* ShopInListWatch Watch AppTests.xctest */,
 				AF095E552AB4EDE500A9D7DD /* ShopInListWatch Watch AppUITests.xctest */,
+				AFA2A3F12B24D223008EAA75 /* ShopInListWidget ExtensionExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -480,6 +558,23 @@
 			productReference = AF095E552AB4EDE500A9D7DD /* ShopInListWatch Watch AppUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		AFA2A3F02B24D223008EAA75 /* ShopInListWidget ExtensionExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AFA2A4092B24D224008EAA75 /* Build configuration list for PBXNativeTarget "ShopInListWidget ExtensionExtension" */;
+			buildPhases = (
+				AFA2A3ED2B24D223008EAA75 /* Sources */,
+				AFA2A3EE2B24D223008EAA75 /* Frameworks */,
+				AFA2A3EF2B24D223008EAA75 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ShopInListWidget ExtensionExtension";
+			productName = "ShopInListWidget ExtensionExtension";
+			productReference = AFA2A3F12B24D223008EAA75 /* ShopInListWidget ExtensionExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		AFF5EECB2AA2216700B840A4 /* ShopInList */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = AFF5EEF42AA2216800B840A4 /* Build configuration list for PBXNativeTarget "ShopInList" */;
@@ -488,11 +583,13 @@
 				AFF5EEC92AA2216700B840A4 /* Frameworks */,
 				AFF5EECA2AA2216700B840A4 /* Resources */,
 				AF095E602AB4EDE500A9D7DD /* Embed Watch Content */,
+				AFA2A4062B24D224008EAA75 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				AF095E5E2AB4EDE500A9D7DD /* PBXTargetDependency */,
+				AFA2A4042B24D224008EAA75 /* PBXTargetDependency */,
 			);
 			name = ShopInList;
 			productName = ShopInList;
@@ -556,6 +653,9 @@
 						CreatedOnToolsVersion = 15.0;
 						TestTargetID = AF095E3B2AB4EDE400A9D7DD;
 					};
+					AFA2A3F02B24D223008EAA75 = {
+						CreatedOnToolsVersion = 15.0.1;
+					};
 					AFF5EECB2AA2216700B840A4 = {
 						CreatedOnToolsVersion = 15.0;
 					};
@@ -588,6 +688,7 @@
 				AF095E3B2AB4EDE400A9D7DD /* ShopInListWatch Watch App */,
 				AF095E4A2AB4EDE500A9D7DD /* ShopInListWatch Watch AppTests */,
 				AF095E542AB4EDE500A9D7DD /* ShopInListWatch Watch AppUITests */,
+				AFA2A3F02B24D223008EAA75 /* ShopInListWidget ExtensionExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -613,6 +714,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AFA2A3EF2B24D223008EAA75 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AFA2A4012B24D224008EAA75 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -692,6 +801,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		AFA2A3ED2B24D223008EAA75 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AFA2A4112B24DA3C008EAA75 /* CoreDataStack.swift in Sources */,
+				AFA2A4102B24D709008EAA75 /* ShopInList.xcdatamodeld in Sources */,
+				AFA2A40F2B24D6E1008EAA75 /* ProductImage.swift in Sources */,
+				AFA2A40B2B24D6D8008EAA75 /* Mall.swift in Sources */,
+				AFA2A40C2B24D6D8008EAA75 /* Group.swift in Sources */,
+				AFA2A40D2B24D6D8008EAA75 /* ProductSection.swift in Sources */,
+				AFA2A40E2B24D6D8008EAA75 /* Product.swift in Sources */,
+				AFA2A3FD2B24D223008EAA75 /* ShopInListWidget_Extension.swift in Sources */,
+				AFA2A3FF2B24D223008EAA75 /* AppIntent.swift in Sources */,
+				AFA2A3F92B24D223008EAA75 /* ShopInListWidget_ExtensionBundle.swift in Sources */,
+				AFA2A3FB2B24D223008EAA75 /* ShopInListWidget_ExtensionLiveActivity.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AFF5EEC82AA2216700B840A4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -762,6 +889,11 @@
 			isa = PBXTargetDependency;
 			target = AF095E3B2AB4EDE400A9D7DD /* ShopInListWatch Watch App */;
 			targetProxy = AF095E5D2AB4EDE500A9D7DD /* PBXContainerItemProxy */;
+		};
+		AFA2A4042B24D224008EAA75 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AFA2A3F02B24D223008EAA75 /* ShopInListWidget ExtensionExtension */;
+			targetProxy = AFA2A4032B24D224008EAA75 /* PBXContainerItemProxy */;
 		};
 		AFF5EEE22AA2216800B840A4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -921,6 +1053,62 @@
 				TARGETED_DEVICE_FAMILY = 4;
 				TEST_TARGET_NAME = "ShopInListWatch Watch App";
 				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Release;
+		};
+		AFA2A4072B24D224008EAA75 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = "ShopInListWidget ExtensionExtension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VV53US7R3M;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "ShopInListWidget Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "ShopInListWidget Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "qqq.ShopInList.ShopInListWidget-Extension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AFA2A4082B24D224008EAA75 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = "ShopInListWidget ExtensionExtension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VV53US7R3M;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "ShopInListWidget Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "ShopInListWidget Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "qqq.ShopInList.ShopInListWidget-Extension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -1209,6 +1397,15 @@
 			buildConfigurations = (
 				AF095E652AB4EDE500A9D7DD /* Debug */,
 				AF095E662AB4EDE500A9D7DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AFA2A4092B24D224008EAA75 /* Build configuration list for PBXNativeTarget "ShopInListWidget ExtensionExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AFA2A4072B24D224008EAA75 /* Debug */,
+				AFA2A4082B24D224008EAA75 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
