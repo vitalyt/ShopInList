@@ -56,7 +56,6 @@
 		AFA2A3F42B24D223008EAA75 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFA2A3F32B24D223008EAA75 /* WidgetKit.framework */; };
 		AFA2A3F62B24D223008EAA75 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFA2A3F52B24D223008EAA75 /* SwiftUI.framework */; };
 		AFA2A3F92B24D223008EAA75 /* ShopInListWidget_ExtensionBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA2A3F82B24D223008EAA75 /* ShopInListWidget_ExtensionBundle.swift */; };
-		AFA2A3FB2B24D223008EAA75 /* ShopInListWidget_ExtensionLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA2A3FA2B24D223008EAA75 /* ShopInListWidget_ExtensionLiveActivity.swift */; };
 		AFA2A3FD2B24D223008EAA75 /* ShopInListWidget_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA2A3FC2B24D223008EAA75 /* ShopInListWidget_Extension.swift */; };
 		AFA2A3FF2B24D223008EAA75 /* AppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA2A3FE2B24D223008EAA75 /* AppIntent.swift */; };
 		AFA2A4012B24D224008EAA75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFA2A4002B24D224008EAA75 /* Assets.xcassets */; };
@@ -191,7 +190,6 @@
 		AFA2A3F32B24D223008EAA75 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		AFA2A3F52B24D223008EAA75 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		AFA2A3F82B24D223008EAA75 /* ShopInListWidget_ExtensionBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopInListWidget_ExtensionBundle.swift; sourceTree = "<group>"; };
-		AFA2A3FA2B24D223008EAA75 /* ShopInListWidget_ExtensionLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopInListWidget_ExtensionLiveActivity.swift; sourceTree = "<group>"; };
 		AFA2A3FC2B24D223008EAA75 /* ShopInListWidget_Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopInListWidget_Extension.swift; sourceTree = "<group>"; };
 		AFA2A3FE2B24D223008EAA75 /* AppIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIntent.swift; sourceTree = "<group>"; };
 		AFA2A4002B24D224008EAA75 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -406,7 +404,6 @@
 			isa = PBXGroup;
 			children = (
 				AFA2A3F82B24D223008EAA75 /* ShopInListWidget_ExtensionBundle.swift */,
-				AFA2A3FA2B24D223008EAA75 /* ShopInListWidget_ExtensionLiveActivity.swift */,
 				AFA2A3FC2B24D223008EAA75 /* ShopInListWidget_Extension.swift */,
 				AFA2A3FE2B24D223008EAA75 /* AppIntent.swift */,
 				AFA2A4002B24D224008EAA75 /* Assets.xcassets */,
@@ -815,7 +812,6 @@
 				AFA2A3FD2B24D223008EAA75 /* ShopInListWidget_Extension.swift in Sources */,
 				AFA2A3FF2B24D223008EAA75 /* AppIntent.swift in Sources */,
 				AFA2A3F92B24D223008EAA75 /* ShopInListWidget_ExtensionBundle.swift in Sources */,
-				AFA2A3FB2B24D223008EAA75 /* ShopInListWidget_ExtensionLiveActivity.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1075,7 +1071,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "qqq.ShopInList.ShopInListWidget-Extension";
+				PRODUCT_BUNDLE_IDENTIFIER = qqq.ShopInList.widget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -1103,7 +1099,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "qqq.ShopInList.ShopInListWidget-Extension";
+				PRODUCT_BUNDLE_IDENTIFIER = qqq.ShopInList.widget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;

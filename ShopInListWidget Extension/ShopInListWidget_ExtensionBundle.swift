@@ -12,6 +12,5 @@ import SwiftUI
 struct ShopInListWidget_ExtensionBundle: WidgetBundle {
     var body: some Widget {
         ShopInListWidget_Extension()
-        ShopInListWidget_ExtensionLiveActivity()
     }
 }

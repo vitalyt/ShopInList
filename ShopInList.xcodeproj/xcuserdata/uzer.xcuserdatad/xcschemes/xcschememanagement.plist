@@ -7,17 +7,45 @@
 		<key>ShopInList.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>2</integer>
 		</dict>
 		<key>ShopInListWatch Watch App.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>1</integer>
+			<integer>0</integer>
 		</dict>
 		<key>ShopInListWidget ExtensionExtension.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>2</integer>
+			<integer>1</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>AF095E3B2AB4EDE400A9D7DD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>AF095E4A2AB4EDE500A9D7DD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>AF095E542AB4EDE500A9D7DD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>AFA2A3F02B24D223008EAA75</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>AFF5EECB2AA2216700B840A4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

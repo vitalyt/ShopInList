@@ -10,50 +10,47 @@ import SwiftUI
 import SwiftData
 
 struct Provider: AppIntentTimelineProvider {
-    func placeholder(in context: Context) -> SimpleEntry {
-        SimpleEntry(date: Date(), configuration: ConfigurationAppIntent())
+    func placeholder(in context: Context) -> TaskEntry {
+      return TaskEntry(date: Date(), task: TaskItem(id: "Sample Task"))
     }
 
-    func snapshot(for configuration: ConfigurationAppIntent, in context: Context) async -> SimpleEntry {
-        SimpleEntry(date: Date(), configuration: configuration)
+    func snapshot(for configuration: ConfigurationAppIntent, in context: Context) async -> TaskEntry {
+      return TaskEntry(date: Date(), task: configuration.taskEntity.task)
     }
-    
-    func timeline(for configuration: ConfigurationAppIntent, in context: Context) async -> Timeline<SimpleEntry> {
-        var entries: [SimpleEntry] = []
 
-        // Generate a timeline consisting of five entries an hour apart, starting from the current date.
-        let currentDate = Date()
-        for hourOffset in 0 ..< 5 {
-            let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate)!
-            let entry = SimpleEntry(date: entryDate, configuration: configuration)
-            entries.append(entry)
-        }
+    func timeline(for configuration: ConfigurationAppIntent, in context: Context) async -> Timeline<TaskEntry> {
+      let entry = TaskEntry(date: Date(), task: configuration.taskEntity.task)
 
-        return Timeline(entries: entries, policy: .atEnd)
+      return Timeline(entries: [entry], policy: .never)
     }
 }
 
-struct SimpleEntry: TimelineEntry {
-    let date: Date
-    let configuration: ConfigurationAppIntent
+struct TaskEntry: TimelineEntry {
+  let date: Date
+  let task: TaskItem
+//  let tasks: [TaskItem]
 }
 
 struct ShopInListWidget_ExtensionEntryView : View {
     @Environment(\.managedObjectContext) private var managedObjectContext
-    @FetchRequest(sortDescriptors: [SortDescriptor(\CDProduct.order, order: .forward), SortDescriptor(\CDProduct.timestamp, order: .reverse)]) private var products: FetchedResults<CDProduct>
-
+    @FetchRequest(sortDescriptors: [SortDescriptor(\CDProduct.order, order: .forward), SortDescriptor(\CDProduct.timestamp, order: .reverse)], predicate: NSPredicate(format: "isSelected == false")) private var products: FetchedResults<CDProduct>
+    
     var entry: Provider.Entry
 
     var body: some View {
-        VStack {
-//            Text("Time:")
-//            Text(entry.date, style: .time)
-//
-//            Text("Favorite Emoji:")
-//            Text(entry.configuration.favoriteEmoji)
-            ForEach(0..<products.count, id: \.self) { index in
-                let text = (products[index].isSelected ? "✅" : "") + (products[index].name ?? "")
+        VStack(alignment: .leading) {
+//            Button(intent: ConfigurationAppIntent(taskEntity: TaskEntity(task: entry.task))) {
+//                Text(entry.task.id)
+//            }
+            ForEach(0..<min(products.count, 6), id: \.self) { index in
+                let item: CDProduct = products[index]
+                let text = (item.isSelected ? "✅" : "") + (item.name ?? "")
                 Text(text)
+//                let configuration = ConfigurationAppIntent(favoriteEmoji: "sd")
+//                configuration.favoriteEmoji = "🤩"
+//                Button(intent: configuration) {
+//                    Text(text)
+//                }
             }
         }
     }
@@ -63,7 +60,10 @@ struct ShopInListWidget_Extension: Widget {
     let kind: String = "ShopInListWidget_Extension"
 
     var body: some WidgetConfiguration {
-        AppIntentConfiguration(kind: kind, intent: ConfigurationAppIntent.self, provider: Provider()) { entry in
+        AppIntentConfiguration(kind: kind, 
+                               intent: ConfigurationAppIntent.self, 
+                               provider: Provider()
+        ) { entry in
             ShopInListWidget_ExtensionEntryView(entry: entry)
                 .containerBackground(.fill.tertiary, for: .widget)
                 .environment(\.managedObjectContext, CoreDataStack.shared.context)
@@ -72,23 +72,10 @@ struct ShopInListWidget_Extension: Widget {
     }
 }
 
-extension ConfigurationAppIntent {
-    fileprivate static var smiley: ConfigurationAppIntent {
-        let intent = ConfigurationAppIntent()
-        intent.favoriteEmoji = "😀"
-        return intent
-    }
-    
-    fileprivate static var starEyes: ConfigurationAppIntent {
-        let intent = ConfigurationAppIntent()
-        intent.favoriteEmoji = "🤩"
-        return intent
-    }
-}
 
-#Preview(as: .systemLarge) {
+#Preview(as: .systemSmall) {
     ShopInListWidget_Extension()
 } timeline: {
-    SimpleEntry(date: .now, configuration: .smiley)
-    SimpleEntry(date: .now, configuration: .starEyes)
+  TaskEntry(date: .now, task: TaskItem(id: "1111"))
+  TaskEntry(date: .now, task: TaskItem(id: "2222"))
 }
