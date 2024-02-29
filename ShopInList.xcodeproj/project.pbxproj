@@ -44,6 +44,10 @@
 		AF74C55D2AC4CF28005B04B0 /* CDEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF74C55B2AC4CF28005B04B0 /* CDEditView.swift */; };
 		AF74C55F2AC4D36C005B04B0 /* CloudSharingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF74C55E2AC4D36C005B04B0 /* CloudSharingController.swift */; };
 		AF74C5602AC4D36C005B04B0 /* CloudSharingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF74C55E2AC4D36C005B04B0 /* CloudSharingController.swift */; };
+		AF779B072B8FC9C10029C54B /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF779B062B8FC9C10029C54B /* DataManager.swift */; };
+		AF779B092B8FC9E20029C54B /* ProductItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF779B082B8FC9E20029C54B /* ProductItem.swift */; };
+		AF779B0B2B8FD0470029C54B /* TodoWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF779B0A2B8FD0470029C54B /* TodoWidget.swift */; };
+		AF779B0D2B8FD0C60029C54B /* TodoIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF779B0C2B8FD0C60029C54B /* TodoIntent.swift */; };
 		AF81AF732AA4A30A0010AEC6 /* DebugMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF81AF722AA4A30A0010AEC6 /* DebugMenuViewController.swift */; };
 		AF8B9CFD2AF54F180031829F /* CDMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8B9CFC2AF54F180031829F /* CDMainView.swift */; };
 		AF8B9CFE2AF54F180031829F /* CDMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8B9CFC2AF54F180031829F /* CDMainView.swift */; };
@@ -181,6 +185,10 @@
 		AF74C5552AC4C67E005B04B0 /* CDProductListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDProductListItemView.swift; sourceTree = "<group>"; };
 		AF74C55B2AC4CF28005B04B0 /* CDEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDEditView.swift; sourceTree = "<group>"; };
 		AF74C55E2AC4D36C005B04B0 /* CloudSharingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudSharingController.swift; sourceTree = "<group>"; };
+		AF779B062B8FC9C10029C54B /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		AF779B082B8FC9E20029C54B /* ProductItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductItem.swift; sourceTree = "<group>"; };
+		AF779B0A2B8FD0470029C54B /* TodoWidget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoWidget.swift; sourceTree = "<group>"; };
+		AF779B0C2B8FD0C60029C54B /* TodoIntent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoIntent.swift; sourceTree = "<group>"; };
 		AF81AF722AA4A30A0010AEC6 /* DebugMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugMenuViewController.swift; sourceTree = "<group>"; };
 		AF8B9CFC2AF54F180031829F /* CDMainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDMainView.swift; sourceTree = "<group>"; };
 		AF8B9CFF2AF55A2E0031829F /* CDSectionList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDSectionList.swift; sourceTree = "<group>"; };
@@ -403,7 +411,11 @@
 		AFA2A3F72B24D223008EAA75 /* ShopInListWidget Extension */ = {
 			isa = PBXGroup;
 			children = (
+				AF779B082B8FC9E20029C54B /* ProductItem.swift */,
+				AF779B062B8FC9C10029C54B /* DataManager.swift */,
 				AFA2A3F82B24D223008EAA75 /* ShopInListWidget_ExtensionBundle.swift */,
+				AF779B0A2B8FD0470029C54B /* TodoWidget.swift */,
+				AF779B0C2B8FD0C60029C54B /* TodoIntent.swift */,
 				AFA2A3FC2B24D223008EAA75 /* ShopInListWidget_Extension.swift */,
 				AFA2A3FE2B24D223008EAA75 /* AppIntent.swift */,
 				AFA2A4002B24D224008EAA75 /* Assets.xcassets */,
@@ -807,10 +819,14 @@
 				AFA2A40F2B24D6E1008EAA75 /* ProductImage.swift in Sources */,
 				AFA2A40B2B24D6D8008EAA75 /* Mall.swift in Sources */,
 				AFA2A40C2B24D6D8008EAA75 /* Group.swift in Sources */,
+				AF779B0B2B8FD0470029C54B /* TodoWidget.swift in Sources */,
 				AFA2A40D2B24D6D8008EAA75 /* ProductSection.swift in Sources */,
 				AFA2A40E2B24D6D8008EAA75 /* Product.swift in Sources */,
 				AFA2A3FD2B24D223008EAA75 /* ShopInListWidget_Extension.swift in Sources */,
+				AF779B072B8FC9C10029C54B /* DataManager.swift in Sources */,
 				AFA2A3FF2B24D223008EAA75 /* AppIntent.swift in Sources */,
+				AF779B0D2B8FD0C60029C54B /* TodoIntent.swift in Sources */,
+				AF779B092B8FC9E20029C54B /* ProductItem.swift in Sources */,
 				AFA2A3F92B24D223008EAA75 /* ShopInListWidget_ExtensionBundle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

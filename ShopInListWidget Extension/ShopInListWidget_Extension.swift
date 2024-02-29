@@ -58,18 +58,33 @@ struct ShopInListWidget_ExtensionEntryView : View {
 
 struct ShopInListWidget_Extension: Widget {
     let kind: String = "ShopInListWidget_Extension"
-
+    let todoItems: [ProductItem] = DataManager().todoItems
+//    var body: some WidgetConfiguration {
+//        AppIntentConfiguration(kind: kind, 
+//                               intent: ConfigurationAppIntent.self, 
+//                               provider: Provider()
+//        ) { entry in
+//            ShopInListWidget_ExtensionEntryView(entry: entry)
+//                .containerBackground(.fill.tertiary, for: .widget)
+//                .environment(\.managedObjectContext, CoreDataStack.shared.context)
+////                .modelContainer(for: ProductSection.self, inMemory: true)
+//        }
+//    }
     var body: some WidgetConfiguration {
-        AppIntentConfiguration(kind: kind, 
-                               intent: ConfigurationAppIntent.self, 
-                               provider: Provider()
-        ) { entry in
-            ShopInListWidget_ExtensionEntryView(entry: entry)
-                .containerBackground(.fill.tertiary, for: .widget)
-                .environment(\.managedObjectContext, CoreDataStack.shared.context)
-//                .modelContainer(for: ProductSection.self, inMemory: true)
+        StaticConfiguration(kind: kind, provider: ToDoProvider()) { entry in
+            if #available(iOS 17.0, *) {
+                TodoWidgetEntryView(entry: entry)
+                    .containerBackground(.fill.tertiary, for: .widget)
+            } else {
+                TodoWidgetEntryView(entry: entry)
+                    .padding()
+                    .background()
+            }
         }
+        .configurationDisplayName("My Widget")
+        .description("This is an example widget.")
     }
+    
 }
 
 

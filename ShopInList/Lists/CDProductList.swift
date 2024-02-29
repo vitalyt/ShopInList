@@ -7,6 +7,7 @@
 
 import SwiftUI
 import SwiftData
+//import CoreData
 
 struct CDProductList: View {
     @Environment(\.managedObjectContext) private var managedObjectContext
@@ -19,6 +20,38 @@ struct CDProductList: View {
     
     init(predicate: NSPredicate?) {
         self._products = FetchRequest<CDProduct>(sortDescriptors: Self.sortDescriptors, predicate: predicate)
+//        fetchAllItems()
+//    }
+//    
+//    func fetchAllItems() {
+//        let fetchRequest: NSFetchRequest<CDProduct> = CDProduct.fetchRequest()
+//        fetchRequest.sortDescriptors = [//NSSortDescriptor(key: "section", ascending: true),
+//                                        NSSortDescriptor(key: "order", ascending: true),
+//                                        NSSortDescriptor(key: "timestamp", ascending: false),
+//        ]
+//        var data = Double()
+//        if let results = try? CoreDataStack.shared.persistentContainer.viewContext.fetch(fetchRequest) {
+//            let items = results.compactMap({ entity in
+//                data = data + Double(entity.image?.imageData?.count ?? 0)
+//                let bcf = ByteCountFormatter()
+//                bcf.allowedUnits = [.useMB] // optional: restricts the units to MB only
+//                bcf.countStyle = .file
+//                let byteCount = Int64(Double(entity.image?.imageData?.count ?? 0))
+//                let string = bcf.string(fromByteCount: byteCount)
+//                if string == "0,4 MB" || string == "0,6 MB" || string == "0,3 MB" {
+//                    print("\(entity.name)")
+//                }
+//                print("formatted result: \(string)")
+//                return entity
+//            })
+//            print(data)
+//            print("There were \(data) bytes")
+//                   let bcf = ByteCountFormatter()
+//                   bcf.allowedUnits = [.useMB] // optional: restricts the units to MB only
+//                   bcf.countStyle = .file
+//                   let string = bcf.string(fromByteCount: Int64(data))
+//                   print("formatted result: \(string)")
+//        }
     }
     
     var body: some View {
