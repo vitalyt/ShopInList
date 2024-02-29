@@ -27,7 +27,7 @@ class DataManager: NSObject, ObservableObject {
     
     func fetchAllItems(completion: @escaping (_ items: [ProductItem]) -> Void) {
         let fetchRequest: NSFetchRequest<CDProduct> = CDProduct.fetchRequest()
-        fetchRequest.fetchLimit = 4
+        fetchRequest.fetchLimit = 3
         fetchRequest.predicate = NSPredicate(format: "isSelected == false")
         fetchRequest.sortDescriptors = [//NSSortDescriptor(key: "section", ascending: true),
                                         NSSortDescriptor(key: "order", ascending: true),

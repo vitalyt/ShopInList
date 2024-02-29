@@ -7,7 +7,6 @@
 
 import Foundation
 import AppIntents
-import WidgetKit
 
 struct TodoIntent: AppIntent {
     

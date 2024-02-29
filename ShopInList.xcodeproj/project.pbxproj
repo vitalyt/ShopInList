@@ -46,7 +46,7 @@
 		AF74C5602AC4D36C005B04B0 /* CloudSharingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF74C55E2AC4D36C005B04B0 /* CloudSharingController.swift */; };
 		AF779B072B8FC9C10029C54B /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF779B062B8FC9C10029C54B /* DataManager.swift */; };
 		AF779B092B8FC9E20029C54B /* ProductItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF779B082B8FC9E20029C54B /* ProductItem.swift */; };
-		AF779B0B2B8FD0470029C54B /* TodoWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF779B0A2B8FD0470029C54B /* TodoWidget.swift */; };
+		AF779B0B2B8FD0470029C54B /* WidgetEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF779B0A2B8FD0470029C54B /* WidgetEntryView.swift */; };
 		AF779B0D2B8FD0C60029C54B /* TodoIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF779B0C2B8FD0C60029C54B /* TodoIntent.swift */; };
 		AF81AF732AA4A30A0010AEC6 /* DebugMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF81AF722AA4A30A0010AEC6 /* DebugMenuViewController.swift */; };
 		AF8B9CFD2AF54F180031829F /* CDMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8B9CFC2AF54F180031829F /* CDMainView.swift */; };
@@ -57,11 +57,11 @@
 		AF8B9D072AF55D4D0031829F /* CDProductSectionEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8B9D052AF55D4D0031829F /* CDProductSectionEditView.swift */; };
 		AF8B9D092AF55E3D0031829F /* CDProductSectionListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8B9D082AF55E3D0031829F /* CDProductSectionListItemView.swift */; };
 		AF8B9D0A2AF55E3D0031829F /* CDProductSectionListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8B9D082AF55E3D0031829F /* CDProductSectionListItemView.swift */; };
+		AF9023522B90E77E004D7AEE /* ToDoProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9023512B90E77E004D7AEE /* ToDoProvider.swift */; };
 		AFA2A3F42B24D223008EAA75 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFA2A3F32B24D223008EAA75 /* WidgetKit.framework */; };
 		AFA2A3F62B24D223008EAA75 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFA2A3F52B24D223008EAA75 /* SwiftUI.framework */; };
 		AFA2A3F92B24D223008EAA75 /* ShopInListWidget_ExtensionBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA2A3F82B24D223008EAA75 /* ShopInListWidget_ExtensionBundle.swift */; };
 		AFA2A3FD2B24D223008EAA75 /* ShopInListWidget_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA2A3FC2B24D223008EAA75 /* ShopInListWidget_Extension.swift */; };
-		AFA2A3FF2B24D223008EAA75 /* AppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA2A3FE2B24D223008EAA75 /* AppIntent.swift */; };
 		AFA2A4012B24D224008EAA75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFA2A4002B24D224008EAA75 /* Assets.xcassets */; };
 		AFA2A4052B24D224008EAA75 /* ShopInListWidget ExtensionExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = AFA2A3F12B24D223008EAA75 /* ShopInListWidget ExtensionExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		AFA2A40B2B24D6D8008EAA75 /* Mall.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF5EF042AA2250A00B840A4 /* Mall.swift */; };
@@ -187,19 +187,19 @@
 		AF74C55E2AC4D36C005B04B0 /* CloudSharingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudSharingController.swift; sourceTree = "<group>"; };
 		AF779B062B8FC9C10029C54B /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		AF779B082B8FC9E20029C54B /* ProductItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductItem.swift; sourceTree = "<group>"; };
-		AF779B0A2B8FD0470029C54B /* TodoWidget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoWidget.swift; sourceTree = "<group>"; };
+		AF779B0A2B8FD0470029C54B /* WidgetEntryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WidgetEntryView.swift; sourceTree = "<group>"; };
 		AF779B0C2B8FD0C60029C54B /* TodoIntent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoIntent.swift; sourceTree = "<group>"; };
 		AF81AF722AA4A30A0010AEC6 /* DebugMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugMenuViewController.swift; sourceTree = "<group>"; };
 		AF8B9CFC2AF54F180031829F /* CDMainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDMainView.swift; sourceTree = "<group>"; };
 		AF8B9CFF2AF55A2E0031829F /* CDSectionList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDSectionList.swift; sourceTree = "<group>"; };
 		AF8B9D052AF55D4D0031829F /* CDProductSectionEditView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDProductSectionEditView.swift; sourceTree = "<group>"; };
 		AF8B9D082AF55E3D0031829F /* CDProductSectionListItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDProductSectionListItemView.swift; sourceTree = "<group>"; };
+		AF9023512B90E77E004D7AEE /* ToDoProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoProvider.swift; sourceTree = "<group>"; };
 		AFA2A3F12B24D223008EAA75 /* ShopInListWidget ExtensionExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "ShopInListWidget ExtensionExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFA2A3F32B24D223008EAA75 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		AFA2A3F52B24D223008EAA75 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		AFA2A3F82B24D223008EAA75 /* ShopInListWidget_ExtensionBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopInListWidget_ExtensionBundle.swift; sourceTree = "<group>"; };
 		AFA2A3FC2B24D223008EAA75 /* ShopInListWidget_Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopInListWidget_Extension.swift; sourceTree = "<group>"; };
-		AFA2A3FE2B24D223008EAA75 /* AppIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIntent.swift; sourceTree = "<group>"; };
 		AFA2A4002B24D224008EAA75 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AFA2A4022B24D224008EAA75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AFA2A40A2B24D5DE008EAA75 /* ShopInListWidget ExtensionExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "ShopInListWidget ExtensionExtension.entitlements"; sourceTree = "<group>"; };
@@ -399,6 +399,33 @@
 			path = DebugMenu;
 			sourceTree = "<group>";
 		};
+		AF90234F2B90E743004D7AEE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AF779B0C2B8FD0C60029C54B /* TodoIntent.swift */,
+				AF779B082B8FC9E20029C54B /* ProductItem.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		AF9023502B90E761004D7AEE /* Providers */ = {
+			isa = PBXGroup;
+			children = (
+				AF779B062B8FC9C10029C54B /* DataManager.swift */,
+				AF9023512B90E77E004D7AEE /* ToDoProvider.swift */,
+			);
+			path = Providers;
+			sourceTree = "<group>";
+		};
+		AF9023532B90E9EE004D7AEE /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				AFA2A3F82B24D223008EAA75 /* ShopInListWidget_ExtensionBundle.swift */,
+				AFA2A3FC2B24D223008EAA75 /* ShopInListWidget_Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		AFA2A3F22B24D223008EAA75 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -411,13 +438,10 @@
 		AFA2A3F72B24D223008EAA75 /* ShopInListWidget Extension */ = {
 			isa = PBXGroup;
 			children = (
-				AF779B082B8FC9E20029C54B /* ProductItem.swift */,
-				AF779B062B8FC9C10029C54B /* DataManager.swift */,
-				AFA2A3F82B24D223008EAA75 /* ShopInListWidget_ExtensionBundle.swift */,
-				AF779B0A2B8FD0470029C54B /* TodoWidget.swift */,
-				AF779B0C2B8FD0C60029C54B /* TodoIntent.swift */,
-				AFA2A3FC2B24D223008EAA75 /* ShopInListWidget_Extension.swift */,
-				AFA2A3FE2B24D223008EAA75 /* AppIntent.swift */,
+				AF9023532B90E9EE004D7AEE /* Extension */,
+				AF9023502B90E761004D7AEE /* Providers */,
+				AF90234F2B90E743004D7AEE /* Models */,
+				AF779B0A2B8FD0470029C54B /* WidgetEntryView.swift */,
 				AFA2A4002B24D224008EAA75 /* Assets.xcassets */,
 				AFA2A4022B24D224008EAA75 /* Info.plist */,
 			);
@@ -819,12 +843,12 @@
 				AFA2A40F2B24D6E1008EAA75 /* ProductImage.swift in Sources */,
 				AFA2A40B2B24D6D8008EAA75 /* Mall.swift in Sources */,
 				AFA2A40C2B24D6D8008EAA75 /* Group.swift in Sources */,
-				AF779B0B2B8FD0470029C54B /* TodoWidget.swift in Sources */,
+				AF779B0B2B8FD0470029C54B /* WidgetEntryView.swift in Sources */,
 				AFA2A40D2B24D6D8008EAA75 /* ProductSection.swift in Sources */,
 				AFA2A40E2B24D6D8008EAA75 /* Product.swift in Sources */,
 				AFA2A3FD2B24D223008EAA75 /* ShopInListWidget_Extension.swift in Sources */,
 				AF779B072B8FC9C10029C54B /* DataManager.swift in Sources */,
-				AFA2A3FF2B24D223008EAA75 /* AppIntent.swift in Sources */,
+				AF9023522B90E77E004D7AEE /* ToDoProvider.swift in Sources */,
 				AF779B0D2B8FD0C60029C54B /* TodoIntent.swift in Sources */,
 				AF779B092B8FC9E20029C54B /* ProductItem.swift in Sources */,
 				AFA2A3F92B24D223008EAA75 /* ShopInListWidget_ExtensionBundle.swift in Sources */,
