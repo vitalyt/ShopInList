@@ -7,7 +7,7 @@
 
 import SwiftUI
 import SwiftData
-//import CoreData
+import CoreData
 
 struct CDProductList: View {
     @Environment(\.managedObjectContext) private var managedObjectContext
@@ -21,25 +21,53 @@ struct CDProductList: View {
     init(predicate: NSPredicate?) {
         self._products = FetchRequest<CDProduct>(sortDescriptors: Self.sortDescriptors, predicate: predicate)
 //        fetchAllItems()
-//    }
-//    
-//    func fetchAllItems() {
-//        let fetchRequest: NSFetchRequest<CDProduct> = CDProduct.fetchRequest()
+    }
+    
+    func fetchAllItems() {
+//        let fetchRequest: NSFetchRequest<CDProductImage> = CDProductImage.fetchRequest()
 //        fetchRequest.sortDescriptors = [//NSSortDescriptor(key: "section", ascending: true),
-//                                        NSSortDescriptor(key: "order", ascending: true),
-//                                        NSSortDescriptor(key: "timestamp", ascending: false),
+////                                        NSSortDescriptor(key: "order", ascending: true),
+//                                        NSSortDescriptor(key: "product", ascending: true),
+////                                        NSSortDescriptor(key: "timestamp", ascending: false),
 //        ]
+//        if let results = try? CoreDataStack.shared.persistentContainer.viewContext.fetch(fetchRequest) {
+//            print(results.compactMap({ print("-->\($0.product?.name)") }))
+//            
+//            results.forEach { section in
+//                if section.product == nil {
+//                    CoreDataStack.shared.persistentContainer.viewContext.delete(section)
+//                    try? CoreDataStack.shared.persistentContainer.viewContext.save()
+//                }
+//            }
+//        }
+        
+        
+        
+        
 //        var data = Double()
 //        if let results = try? CoreDataStack.shared.persistentContainer.viewContext.fetch(fetchRequest) {
+//            print(results.compactMap({ print("-->\($0.section!.name!)->\($0.name!)->\($0.order)") }))
 //            let items = results.compactMap({ entity in
+//                
+////                if let sectionName = entity.section!.name {
+////                    print("-->\(sectionName)->\(entity.name!)->\(entity.order)")
+////                } else {
+////                    print("--> WRONG\(entity.name)")
+////                }
+//                
+//                
 //                data = data + Double(entity.image?.imageData?.count ?? 0)
 //                let bcf = ByteCountFormatter()
 //                bcf.allowedUnits = [.useMB] // optional: restricts the units to MB only
 //                bcf.countStyle = .file
 //                let byteCount = Int64(Double(entity.image?.imageData?.count ?? 0))
 //                let string = bcf.string(fromByteCount: byteCount)
-//                if string == "0,4 MB" || string == "0,6 MB" || string == "0,3 MB" {
-//                    print("\(entity.name)")
+//                
+//                if Float(byteCount) / 1000000 > 0.2 {
+//                    print("---->\(entity.name) == \(string)")
+//                    if let image = entity.image {
+//                   //     CoreDataStack.shared.persistentContainer.viewContext.delete(image)
+//                    }
 //                }
 //                print("formatted result: \(string)")
 //                return entity
@@ -51,6 +79,11 @@ struct CDProductList: View {
 //                   bcf.countStyle = .file
 //                   let string = bcf.string(fromByteCount: Int64(data))
 //                   print("formatted result: \(string)")
+//        }
+//        do {
+////            try CoreDataStack.shared.persistentContainer.viewContext.save()
+//        } catch let error {
+//            print(error)
 //        }
     }
     

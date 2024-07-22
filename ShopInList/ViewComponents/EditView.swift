@@ -23,6 +23,7 @@ struct EditView: View {
     init(model: Product) {
         self.model = model
         self.selectedImageData = model.image?.imageData
+        print("-->\(model)")
     }
     
     var body: some View {

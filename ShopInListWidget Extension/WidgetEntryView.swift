@@ -14,13 +14,20 @@ struct TodoWidgetEntryView : View {
 
     var body: some View {
         VStack {
-            ForEach(0..<todoItems.count, id: \.self) { index in
-                Button(intent: TodoIntent(item: todoItems[index].taskName)) {
-                    Label(todoItems[index].taskName, systemImage: "circle\(todoItems[index].isCompleted ? ".fill" : "")")
+            ForEach(0..<entry.items.count, id: \.self) { index in
+                Button(intent: TodoIntent(item: entry.items[index].taskName)) {
+                    Label(entry.items[index].taskName, systemImage: "circle\(entry.items[index].isCompleted ? ".fill" : "")")
                         .frame(maxWidth: .infinity, alignment: .leading).contentShape(Rectangle())
                 }
             }.lineLimit(1)
             Spacer()
+//            ForEach(0..<todoItems.count, id: \.self) { index in
+//                Button(intent: TodoIntent(item: todoItems[index].taskName)) {
+//                    Label(todoItems[index].taskName, systemImage: "circle\(todoItems[index].isCompleted ? ".fill" : "")")
+//                        .frame(maxWidth: .infinity, alignment: .leading).contentShape(Rectangle())
+//                }
+//            }.lineLimit(1)
+//            Spacer()
         }
     }
 }

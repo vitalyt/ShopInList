@@ -7,6 +7,7 @@
 
 import SwiftUI
 import SwiftData
+import CoreData
 
 struct CDMainView: View {
     @Environment(\.managedObjectContext) private var managedObjectContext
@@ -15,6 +16,32 @@ struct CDMainView: View {
     
     @FetchRequest(sortDescriptors: [SortDescriptor(\CDProductSection.order, order: .forward), SortDescriptor(\CDProductSection.timestamp, order: .reverse)]) private var productSections: FetchedResults<CDProductSection>
     @FetchRequest(sortDescriptors: [SortDescriptor(\.name)]) private var productsWithoutSection: FetchedResults<CDProduct>
+    
+//    init() {
+//        fetchAllItems()
+//    }
+//    
+//    func fetchAllItems() {
+//        let fetchRequest: NSFetchRequest<CDProductImage> = CDProductImage.fetchRequest()
+////        fetchRequest.fetchLimit = 3
+//        fetchRequest.predicate = NSPredicate(format: "product == nil")
+////        fetchRequest.sortDescriptors = [//NSSortDescriptor(key: "section", ascending: true),
+////                                        NSSortDescriptor(key: "order", ascending: true),
+////                                        NSSortDescriptor(key: "timestamp", ascending: false),
+////        ]
+//        if let results = try? CoreDataStack.shared.persistentContainer.viewContext.fetch(fetchRequest) {
+//            print("results count \(results.count)")
+//            results.forEach { item in
+//                print(item)
+//                print(item.product)
+//                CoreDataStack.shared.persistentContainer.viewContext.delete(item)
+//            }
+//            
+//            let r = try? CoreDataStack.shared.persistentContainer.viewContext.save()
+//            print(r)
+//        }
+//    }
+    
     
     var body: some View {
         NavigationSplitView {

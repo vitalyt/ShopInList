@@ -21,13 +21,14 @@ class DataManager: NSObject, ObservableObject {
         super.init()
         container.loadPersistentStores { _, _ in }
         if todoItems.count == 0 {
-            fetchAllItems { items in self.todoItems = items }
+            fetchItems { items in self.todoItems = items }
         }
     }
     
-    func fetchAllItems(completion: @escaping (_ items: [ProductItem]) -> Void) {
+    func fetchItems(/*fetchOffset: Int = 0, fetchLimit: Int = 3, */completion: @escaping (_ items: [ProductItem]) -> Void) {
         let fetchRequest: NSFetchRequest<CDProduct> = CDProduct.fetchRequest()
-        fetchRequest.fetchLimit = 3
+//        fetchRequest.fetchOffset = fetchOffset
+//        fetchRequest.fetchLimit = fetchLimit
         fetchRequest.predicate = NSPredicate(format: "isSelected == false")
         fetchRequest.sortDescriptors = [//NSSortDescriptor(key: "section", ascending: true),
                                         NSSortDescriptor(key: "order", ascending: true),
@@ -41,6 +42,28 @@ class DataManager: NSObject, ObservableObject {
             }))
         } else {
             completion([])
+        }
+    }
+    
+    
+    func fetchItems(fetchOffset: Int = 0, fetchLimit: Int = 3) -> [ProductItem] {
+        let fetchRequest: NSFetchRequest<CDProduct> = CDProduct.fetchRequest()
+        fetchRequest.fetchOffset = fetchOffset
+        fetchRequest.fetchLimit = fetchLimit
+        fetchRequest.predicate = NSPredicate(format: "isSelected == false")
+        fetchRequest.sortDescriptors = [//NSSortDescriptor(key: "section", ascending: true),
+                                        NSSortDescriptor(key: "order", ascending: true),
+                                        NSSortDescriptor(key: "timestamp", ascending: false),
+        ]
+        if let results = try? CoreDataStack.shared.persistentContainer.viewContext.fetch(fetchRequest) {
+            return results.compactMap({ entity in
+                let model = ProductItem(task: entity.name ?? "")
+                model.isCompleted = entity.isSelected
+                return model
+            })
+//            return self.todoItems
+        } else {
+            return []
         }
     }
     
