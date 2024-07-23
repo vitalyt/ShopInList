@@ -18,22 +18,66 @@ struct CDMainView: View {
     @FetchRequest(sortDescriptors: [SortDescriptor(\.name)]) private var productsWithoutSection: FetchedResults<CDProduct>
     
 //    init() {
-//        fetchAllItems()
+//        
 //    }
-//    
-//    func fetchAllItems() {
+    
+//    func deleteAllItems() {
 //        let fetchRequest: NSFetchRequest<CDProductImage> = CDProductImage.fetchRequest()
+//        
+//    }
+    
+//    func fetchAllItems() {
+//        let json = """
+//{\"Baking\":[\"Bread\"],\"Snakes\":[\"Popcorn\",\"Cheeps S\"],\"Drinks\":[\"Juice banana\",\"Wine S\",\"Coffee (BUSHIDO, Paulig, EGOISTE)\",\"Milk\",\"Hdhdhdhdh\",\"Cola\",\"Beer\",\"Water\",\"Water S\",\"Wine R\",\"Wine W\",\"Whiskey\"],\"Fruits\":[\"Grapes\",\"Apricots\",\"Blueberries\",\"Mandarin\",\"Melon\",\"Apple G\",\"Kiwi\",\"Lime\",\"Passionfruit\",\"Lemon\",\"Orange\",\"Apple R\",\"Raspberries\",\"Mango\",\"Grapes R\",\"Peach\"],\"Meat | Fish\":[\"Minced P\",\"Chicken Breast\",\"Jamon\",\"Chicken Wings\",\"Fish S\",\"Minced B\",\"Fish\",\"Shrimps\",\"Eggs\",\"Bacon\",\"Beef Fillet\",\"Chicken Portions\",\"Leg of Lamb\",\"Mindset Beff\",\"Pork Ribs\",\"Sausages \",\"Steaks\",\"Bastourma\"],\"Vegetables\":[\"Avocado\",\"Potato S\",\"Basil\",\"Parsley\",\"Beetroot\",\"Carrots\",\"Dill\",\"Cucumber\",\"Eggplant\",\"Tomatoes\",\"Radish\",\"Rocket\",\"Sweet corn\",\"Zucchini\",\"Beans\",\"Broccoli\",\"Brussel sprouts\",\"Cabbage, Chinese\",\"Sprague\",\"Salat\",\"Mushrooms\",\"Cauliflower\",\"Cherry\",\"Marrows\",\"Pepper R\",\"Onion R\",\"Sweet Potato\",\"Tomato\",\"Onion\",\"Garlic\",\"Potato\",\"Banana\",\"Watermelon\"],\"Dairy\":[\"Camber\",\"Mozzarella \",\"Brie\",\"Parmesan\",\"Feta\",\"Halloumi\",\"Cheddar \",\"Natural Yoghurt \",\"Stilton Cheese \",\"Chees\"]}
+//"""
+//        func convertToDictionary(text: String) -> [String: [String]]? {
+//            if let data = text.data(using: .utf8) {
+//                do {
+//                    return try JSONSerialization.jsonObject(with: data, options: []) as? [String: [String]]
+//                } catch {
+//                    print(error.localizedDescription)
+//                }
+//            }
+//            return nil
+//        }
+//        
+//        let dic = convertToDictionary(text: json)!
+//        let context = managedObjectContext
+//        
+//        dic.keys.forEach({ key in
+//            let values = dic[key]!
+//            
+//            let newSectionItem = CDProductSection(context: context)
+//            newSectionItem.name = key
+//            context.insert(newSectionItem)
+//            
+//            values.forEach { item in
+//                let newItem = CDProduct(context: context)
+//                
+//                newItem.name = item
+//                newItem.timestamp = Date()
+//                newItem.section = newSectionItem
+//                
+//                context.insert(newItem)
+//            }
+//        })
+//        
+//        CoreDataStack.shared.save()
+//    }
+//
+//    func deleteAllItems() {
+//        let fetchRequest: NSFetchRequest<CDProduct> = CDProduct.fetchRequest()
 ////        fetchRequest.fetchLimit = 3
-//        fetchRequest.predicate = NSPredicate(format: "product == nil")
-////        fetchRequest.sortDescriptors = [//NSSortDescriptor(key: "section", ascending: true),
-////                                        NSSortDescriptor(key: "order", ascending: true),
+//        fetchRequest.predicate = NSPredicate(format: "section == nil")
+//        fetchRequest.sortDescriptors = [//NSSortDescriptor(key: "section", ascending: true),
+//                                        NSSortDescriptor(key: "order", ascending: true),
 ////                                        NSSortDescriptor(key: "timestamp", ascending: false),
-////        ]
+//        ]
 //        if let results = try? CoreDataStack.shared.persistentContainer.viewContext.fetch(fetchRequest) {
 //            print("results count \(results.count)")
 //            results.forEach { item in
 //                print(item)
-//                print(item.product)
+//                print(item.section)
 //                CoreDataStack.shared.persistentContainer.viewContext.delete(item)
 //            }
 //            
@@ -72,6 +116,7 @@ struct CDMainView: View {
     }
 
     private func addItem() {
+//        deleteAllItems()
         withAnimation {
             let newItem = CDProduct(context: managedObjectContext)
             if selectedItem < productSections.count {

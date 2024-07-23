@@ -44,7 +44,7 @@ struct CDProductListItemView: View {
                 WKInterfaceDevice.current().play(.success)
 #endif
             }
-            Text(model.name!)
+            Text(model.name ?? "")
             if let imageData = model.image?.imageData,
                 let uiImage = UIImage(data: imageData) {
                         Image(uiImage: uiImage)
