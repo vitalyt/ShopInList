@@ -9,9 +9,6 @@
 /* Begin PBXBuildFile section */
 		AF095E432AB4EDE500A9D7DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF095E422AB4EDE500A9D7DD /* Assets.xcassets */; };
 		AF095E462AB4EDE500A9D7DD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF095E452AB4EDE500A9D7DD /* Preview Assets.xcassets */; };
-		AF095E502AB4EDE500A9D7DD /* ShopInListWatch_Watch_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF095E4F2AB4EDE500A9D7DD /* ShopInListWatch_Watch_AppTests.swift */; };
-		AF095E5A2AB4EDE500A9D7DD /* ShopInListWatch_Watch_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF095E592AB4EDE500A9D7DD /* ShopInListWatch_Watch_AppUITests.swift */; };
-		AF095E5C2AB4EDE500A9D7DD /* ShopInListWatch_Watch_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF095E5B2AB4EDE500A9D7DD /* ShopInListWatch_Watch_AppUITestsLaunchTests.swift */; };
 		AF095E5F2AB4EDE500A9D7DD /* ShopInListWatch Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = AF095E3C2AB4EDE400A9D7DD /* ShopInListWatch Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		AF095E6A2AB4F1C500A9D7DD /* ProductList.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4D8C2C2AB371470096ADBA /* ProductList.swift */; };
 		AF095E6B2AB4F1C600A9D7DD /* ProductSectionListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3D91862AA5B1EE00DBA3EF /* ProductSectionListItemView.swift */; };
@@ -84,9 +81,6 @@
 		AFF5EED22AA2216700B840A4 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF5EED12AA2216700B840A4 /* MainView.swift */; };
 		AFF5EED62AA2216800B840A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFF5EED52AA2216800B840A4 /* Assets.xcassets */; };
 		AFF5EED92AA2216800B840A4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFF5EED82AA2216800B840A4 /* Preview Assets.xcassets */; };
-		AFF5EEE52AA2216800B840A4 /* ShopInListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF5EEE42AA2216800B840A4 /* ShopInListTests.swift */; };
-		AFF5EEEF2AA2216800B840A4 /* ShopInListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF5EEEE2AA2216800B840A4 /* ShopInListUITests.swift */; };
-		AFF5EEF12AA2216800B840A4 /* ShopInListUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF5EEF02AA2216800B840A4 /* ShopInListUITestsLaunchTests.swift */; };
 		AFF5EEFF2AA221DD00B840A4 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF5EEFE2AA221DD00B840A4 /* Product.swift */; };
 		AFF5EF012AA2234F00B840A4 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF5EF002AA2234F00B840A4 /* Group.swift */; };
 		AFF5EF032AA2235F00B840A4 /* ProductSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF5EF022AA2235F00B840A4 /* ProductSection.swift */; };
@@ -94,20 +88,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		AF095E4C2AB4EDE500A9D7DD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = AFF5EEC42AA2216700B840A4 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = AF095E3B2AB4EDE400A9D7DD;
-			remoteInfo = "ShopInListWatch Watch App";
-		};
-		AF095E562AB4EDE500A9D7DD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = AFF5EEC42AA2216700B840A4 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = AF095E3B2AB4EDE400A9D7DD;
-			remoteInfo = "ShopInListWatch Watch App";
-		};
 		AF095E5D2AB4EDE500A9D7DD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = AFF5EEC42AA2216700B840A4 /* Project object */;
@@ -121,20 +101,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = AFA2A3F02B24D223008EAA75;
 			remoteInfo = "ShopInListWidget ExtensionExtension";
-		};
-		AFF5EEE12AA2216800B840A4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = AFF5EEC42AA2216700B840A4 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = AFF5EECB2AA2216700B840A4;
-			remoteInfo = ShopInList;
-		};
-		AFF5EEEB2AA2216800B840A4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = AFF5EEC42AA2216700B840A4 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = AFF5EECB2AA2216700B840A4;
-			remoteInfo = ShopInList;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -167,11 +133,6 @@
 		AF095E3C2AB4EDE400A9D7DD /* ShopInListWatch Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ShopInListWatch Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF095E422AB4EDE500A9D7DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF095E452AB4EDE500A9D7DD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		AF095E4B2AB4EDE500A9D7DD /* ShopInListWatch Watch AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ShopInListWatch Watch AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		AF095E4F2AB4EDE500A9D7DD /* ShopInListWatch_Watch_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopInListWatch_Watch_AppTests.swift; sourceTree = "<group>"; };
-		AF095E552AB4EDE500A9D7DD /* ShopInListWatch Watch AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ShopInListWatch Watch AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		AF095E592AB4EDE500A9D7DD /* ShopInListWatch_Watch_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopInListWatch_Watch_AppUITests.swift; sourceTree = "<group>"; };
-		AF095E5B2AB4EDE500A9D7DD /* ShopInListWatch_Watch_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopInListWatch_Watch_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		AF095EB52AB5F7F800A9D7DD /* ShopInListWatch Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "ShopInListWatch Watch App.entitlements"; sourceTree = "<group>"; };
 		AF095EB62AB5F81B00A9D7DD /* ShopInListWatch-Watch-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "ShopInListWatch-Watch-App-Info.plist"; sourceTree = SOURCE_ROOT; };
 		AF3D91842AA5B0A100DBA3EF /* SectionList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionList.swift; sourceTree = "<group>"; };
@@ -217,11 +178,6 @@
 		AFF5EED82AA2216800B840A4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AFF5EEDA2AA2216800B840A4 /* ShopInList.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ShopInList.entitlements; sourceTree = "<group>"; };
 		AFF5EEDB2AA2216800B840A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AFF5EEE02AA2216800B840A4 /* ShopInListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShopInListTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		AFF5EEE42AA2216800B840A4 /* ShopInListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopInListTests.swift; sourceTree = "<group>"; };
-		AFF5EEEA2AA2216800B840A4 /* ShopInListUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShopInListUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		AFF5EEEE2AA2216800B840A4 /* ShopInListUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopInListUITests.swift; sourceTree = "<group>"; };
-		AFF5EEF02AA2216800B840A4 /* ShopInListUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopInListUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		AFF5EEFE2AA221DD00B840A4 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		AFF5EF002AA2234F00B840A4 /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		AFF5EF022AA2235F00B840A4 /* ProductSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductSection.swift; sourceTree = "<group>"; };
@@ -230,20 +186,6 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		AF095E392AB4EDE400A9D7DD /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		AF095E482AB4EDE500A9D7DD /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		AF095E522AB4EDE500A9D7DD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -260,20 +202,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		AFF5EEC92AA2216700B840A4 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		AFF5EEDD2AA2216800B840A4 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		AFF5EEE72AA2216800B840A4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -300,23 +228,6 @@
 				AF095E452AB4EDE500A9D7DD /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		AF095E4E2AB4EDE500A9D7DD /* ShopInListWatch Watch AppTests */ = {
-			isa = PBXGroup;
-			children = (
-				AF095E4F2AB4EDE500A9D7DD /* ShopInListWatch_Watch_AppTests.swift */,
-			);
-			path = "ShopInListWatch Watch AppTests";
-			sourceTree = "<group>";
-		};
-		AF095E582AB4EDE500A9D7DD /* ShopInListWatch Watch AppUITests */ = {
-			isa = PBXGroup;
-			children = (
-				AF095E592AB4EDE500A9D7DD /* ShopInListWatch_Watch_AppUITests.swift */,
-				AF095E5B2AB4EDE500A9D7DD /* ShopInListWatch_Watch_AppUITestsLaunchTests.swift */,
-			);
-			path = "ShopInListWatch Watch AppUITests";
 			sourceTree = "<group>";
 		};
 		AF4D8C2E2AB387970096ADBA /* Lists */ = {
@@ -453,11 +364,7 @@
 			isa = PBXGroup;
 			children = (
 				AFF5EECE2AA2216700B840A4 /* ShopInList */,
-				AFF5EEE32AA2216800B840A4 /* ShopInListTests */,
-				AFF5EEED2AA2216800B840A4 /* ShopInListUITests */,
 				AF095E3D2AB4EDE400A9D7DD /* ShopInListWatch Watch App */,
-				AF095E4E2AB4EDE500A9D7DD /* ShopInListWatch Watch AppTests */,
-				AF095E582AB4EDE500A9D7DD /* ShopInListWatch Watch AppUITests */,
 				AFA2A3F72B24D223008EAA75 /* ShopInListWidget Extension */,
 				AFA2A3F22B24D223008EAA75 /* Frameworks */,
 				AFF5EECD2AA2216700B840A4 /* Products */,
@@ -468,11 +375,7 @@
 			isa = PBXGroup;
 			children = (
 				AFF5EECC2AA2216700B840A4 /* ShopInList.app */,
-				AFF5EEE02AA2216800B840A4 /* ShopInListTests.xctest */,
-				AFF5EEEA2AA2216800B840A4 /* ShopInListUITests.xctest */,
 				AF095E3C2AB4EDE400A9D7DD /* ShopInListWatch Watch App.app */,
-				AF095E4B2AB4EDE500A9D7DD /* ShopInListWatch Watch AppTests.xctest */,
-				AF095E552AB4EDE500A9D7DD /* ShopInListWatch Watch AppUITests.xctest */,
 				AFA2A3F12B24D223008EAA75 /* ShopInListWidget ExtensionExtension.appex */,
 			);
 			name = Products;
@@ -506,23 +409,6 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		AFF5EEE32AA2216800B840A4 /* ShopInListTests */ = {
-			isa = PBXGroup;
-			children = (
-				AFF5EEE42AA2216800B840A4 /* ShopInListTests.swift */,
-			);
-			path = ShopInListTests;
-			sourceTree = "<group>";
-		};
-		AFF5EEED2AA2216800B840A4 /* ShopInListUITests */ = {
-			isa = PBXGroup;
-			children = (
-				AFF5EEEE2AA2216800B840A4 /* ShopInListUITests.swift */,
-				AFF5EEF02AA2216800B840A4 /* ShopInListUITestsLaunchTests.swift */,
-			);
-			path = ShopInListUITests;
-			sourceTree = "<group>";
-		};
 		AFF5EEFD2AA2219700B840A4 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -554,42 +440,6 @@
 			productName = "ShopInListWatch Watch App";
 			productReference = AF095E3C2AB4EDE400A9D7DD /* ShopInListWatch Watch App.app */;
 			productType = "com.apple.product-type.application";
-		};
-		AF095E4A2AB4EDE500A9D7DD /* ShopInListWatch Watch AppTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = AF095E682AB4EDE500A9D7DD /* Build configuration list for PBXNativeTarget "ShopInListWatch Watch AppTests" */;
-			buildPhases = (
-				AF095E472AB4EDE500A9D7DD /* Sources */,
-				AF095E482AB4EDE500A9D7DD /* Frameworks */,
-				AF095E492AB4EDE500A9D7DD /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				AF095E4D2AB4EDE500A9D7DD /* PBXTargetDependency */,
-			);
-			name = "ShopInListWatch Watch AppTests";
-			productName = "ShopInListWatch Watch AppTests";
-			productReference = AF095E4B2AB4EDE500A9D7DD /* ShopInListWatch Watch AppTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		AF095E542AB4EDE500A9D7DD /* ShopInListWatch Watch AppUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = AF095E692AB4EDE500A9D7DD /* Build configuration list for PBXNativeTarget "ShopInListWatch Watch AppUITests" */;
-			buildPhases = (
-				AF095E512AB4EDE500A9D7DD /* Sources */,
-				AF095E522AB4EDE500A9D7DD /* Frameworks */,
-				AF095E532AB4EDE500A9D7DD /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				AF095E572AB4EDE500A9D7DD /* PBXTargetDependency */,
-			);
-			name = "ShopInListWatch Watch AppUITests";
-			productName = "ShopInListWatch Watch AppUITests";
-			productReference = AF095E552AB4EDE500A9D7DD /* ShopInListWatch Watch AppUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 		AFA2A3F02B24D223008EAA75 /* ShopInListWidget ExtensionExtension */ = {
 			isa = PBXNativeTarget;
@@ -629,42 +479,6 @@
 			productReference = AFF5EECC2AA2216700B840A4 /* ShopInList.app */;
 			productType = "com.apple.product-type.application";
 		};
-		AFF5EEDF2AA2216800B840A4 /* ShopInListTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = AFF5EEF72AA2216800B840A4 /* Build configuration list for PBXNativeTarget "ShopInListTests" */;
-			buildPhases = (
-				AFF5EEDC2AA2216800B840A4 /* Sources */,
-				AFF5EEDD2AA2216800B840A4 /* Frameworks */,
-				AFF5EEDE2AA2216800B840A4 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				AFF5EEE22AA2216800B840A4 /* PBXTargetDependency */,
-			);
-			name = ShopInListTests;
-			productName = ShopInListTests;
-			productReference = AFF5EEE02AA2216800B840A4 /* ShopInListTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		AFF5EEE92AA2216800B840A4 /* ShopInListUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = AFF5EEFA2AA2216800B840A4 /* Build configuration list for PBXNativeTarget "ShopInListUITests" */;
-			buildPhases = (
-				AFF5EEE62AA2216800B840A4 /* Sources */,
-				AFF5EEE72AA2216800B840A4 /* Frameworks */,
-				AFF5EEE82AA2216800B840A4 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				AFF5EEEC2AA2216800B840A4 /* PBXTargetDependency */,
-			);
-			name = ShopInListUITests;
-			productName = ShopInListUITests;
-			productReference = AFF5EEEA2AA2216800B840A4 /* ShopInListUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -678,27 +492,11 @@
 					AF095E3B2AB4EDE400A9D7DD = {
 						CreatedOnToolsVersion = 15.0;
 					};
-					AF095E4A2AB4EDE500A9D7DD = {
-						CreatedOnToolsVersion = 15.0;
-						TestTargetID = AF095E3B2AB4EDE400A9D7DD;
-					};
-					AF095E542AB4EDE500A9D7DD = {
-						CreatedOnToolsVersion = 15.0;
-						TestTargetID = AF095E3B2AB4EDE400A9D7DD;
-					};
 					AFA2A3F02B24D223008EAA75 = {
 						CreatedOnToolsVersion = 15.0.1;
 					};
 					AFF5EECB2AA2216700B840A4 = {
 						CreatedOnToolsVersion = 15.0;
-					};
-					AFF5EEDF2AA2216800B840A4 = {
-						CreatedOnToolsVersion = 15.0;
-						TestTargetID = AFF5EECB2AA2216700B840A4;
-					};
-					AFF5EEE92AA2216800B840A4 = {
-						CreatedOnToolsVersion = 15.0;
-						TestTargetID = AFF5EECB2AA2216700B840A4;
 					};
 				};
 			};
@@ -716,11 +514,7 @@
 			projectRoot = "";
 			targets = (
 				AFF5EECB2AA2216700B840A4 /* ShopInList */,
-				AFF5EEDF2AA2216800B840A4 /* ShopInListTests */,
-				AFF5EEE92AA2216800B840A4 /* ShopInListUITests */,
 				AF095E3B2AB4EDE400A9D7DD /* ShopInListWatch Watch App */,
-				AF095E4A2AB4EDE500A9D7DD /* ShopInListWatch Watch AppTests */,
-				AF095E542AB4EDE500A9D7DD /* ShopInListWatch Watch AppUITests */,
 				AFA2A3F02B24D223008EAA75 /* ShopInListWidget ExtensionExtension */,
 			);
 		};
@@ -733,20 +527,6 @@
 			files = (
 				AF095E462AB4EDE500A9D7DD /* Preview Assets.xcassets in Resources */,
 				AF095E432AB4EDE500A9D7DD /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		AF095E492AB4EDE500A9D7DD /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		AF095E532AB4EDE500A9D7DD /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -764,20 +544,6 @@
 			files = (
 				AFF5EED92AA2216800B840A4 /* Preview Assets.xcassets in Resources */,
 				AFF5EED62AA2216800B840A4 /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		AFF5EEDE2AA2216800B840A4 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		AFF5EEE82AA2216800B840A4 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -814,23 +580,6 @@
 				AF74C5602AC4D36C005B04B0 /* CloudSharingController.swift in Sources */,
 				AF8B9D012AF55A2E0031829F /* CDSectionList.swift in Sources */,
 				AF095E782AB4F1C600A9D7DD /* Mall.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		AF095E472AB4EDE500A9D7DD /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				AF095E502AB4EDE500A9D7DD /* ShopInListWatch_Watch_AppTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		AF095E512AB4EDE500A9D7DD /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				AF095E5A2AB4EDE500A9D7DD /* ShopInListWatch_Watch_AppUITests.swift in Sources */,
-				AF095E5C2AB4EDE500A9D7DD /* ShopInListWatch_Watch_AppUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -891,36 +640,9 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AFF5EEDC2AA2216800B840A4 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				AFF5EEE52AA2216800B840A4 /* ShopInListTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		AFF5EEE62AA2216800B840A4 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				AFF5EEEF2AA2216800B840A4 /* ShopInListUITests.swift in Sources */,
-				AFF5EEF12AA2216800B840A4 /* ShopInListUITestsLaunchTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		AF095E4D2AB4EDE500A9D7DD /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = AF095E3B2AB4EDE400A9D7DD /* ShopInListWatch Watch App */;
-			targetProxy = AF095E4C2AB4EDE500A9D7DD /* PBXContainerItemProxy */;
-		};
-		AF095E572AB4EDE500A9D7DD /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = AF095E3B2AB4EDE400A9D7DD /* ShopInListWatch Watch App */;
-			targetProxy = AF095E562AB4EDE500A9D7DD /* PBXContainerItemProxy */;
-		};
 		AF095E5E2AB4EDE500A9D7DD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = AF095E3B2AB4EDE400A9D7DD /* ShopInListWatch Watch App */;
@@ -930,16 +652,6 @@
 			isa = PBXTargetDependency;
 			target = AFA2A3F02B24D223008EAA75 /* ShopInListWidget ExtensionExtension */;
 			targetProxy = AFA2A4032B24D224008EAA75 /* PBXContainerItemProxy */;
-		};
-		AFF5EEE22AA2216800B840A4 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = AFF5EECB2AA2216700B840A4 /* ShopInList */;
-			targetProxy = AFF5EEE12AA2216800B840A4 /* PBXContainerItemProxy */;
-		};
-		AFF5EEEC2AA2216800B840A4 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = AFF5EECB2AA2216700B840A4 /* ShopInList */;
-			targetProxy = AFF5EEEB2AA2216800B840A4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -959,14 +671,14 @@
 				INFOPLIST_FILE = "ShopInListWatch-Watch-App-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = ShopInListWatch;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = qqq.ShopInList;
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = qqq.ShopInList1;
 				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = qqq.ShopInList.watchkit;
+				PRODUCT_BUNDLE_IDENTIFIER = qqq.ShopInList1.watchkit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -992,102 +704,20 @@
 				INFOPLIST_FILE = "ShopInListWatch-Watch-App-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = ShopInListWatch;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = qqq.ShopInList;
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = qqq.ShopInList1;
 				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = qqq.ShopInList.watchkit;
+				PRODUCT_BUNDLE_IDENTIFIER = qqq.ShopInList1.watchkit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 10.0;
-			};
-			name = Release;
-		};
-		AF095E632AB4EDE500A9D7DD /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = HJLHKX7H2T;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "qqq.ShopInList.ShopInListWatch-Watch-AppTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ShopInListWatch Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ShopInListWatch Watch App";
-				WATCHOS_DEPLOYMENT_TARGET = 10.0;
-			};
-			name = Debug;
-		};
-		AF095E642AB4EDE500A9D7DD /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = HJLHKX7H2T;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "qqq.ShopInList.ShopInListWatch-Watch-AppTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ShopInListWatch Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ShopInListWatch Watch App";
-				WATCHOS_DEPLOYMENT_TARGET = 10.0;
-			};
-			name = Release;
-		};
-		AF095E652AB4EDE500A9D7DD /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = HJLHKX7H2T;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "qqq.ShopInList.ShopInListWatch-Watch-AppUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				TEST_TARGET_NAME = "ShopInListWatch Watch App";
-				WATCHOS_DEPLOYMENT_TARGET = 10.0;
-			};
-			name = Debug;
-		};
-		AF095E662AB4EDE500A9D7DD /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = HJLHKX7H2T;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "qqq.ShopInList.ShopInListWatch-Watch-AppUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				TEST_TARGET_NAME = "ShopInListWatch Watch App";
 				WATCHOS_DEPLOYMENT_TARGET = 10.0;
 			};
 			name = Release;
@@ -1111,7 +741,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = qqq.ShopInList.widget;
+				PRODUCT_BUNDLE_IDENTIFIER = qqq.ShopInList1.widget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -1139,7 +769,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = qqq.ShopInList.widget;
+				PRODUCT_BUNDLE_IDENTIFIER = qqq.ShopInList1.widget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -1291,7 +921,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = qqq.ShopInList;
+				PRODUCT_BUNDLE_IDENTIFIER = qqq.ShopInList1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -1323,87 +953,11 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = qqq.ShopInList;
+				PRODUCT_BUNDLE_IDENTIFIER = qqq.ShopInList1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		AFF5EEF82AA2216800B840A4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = VV53US7R3M;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = qqq.ShopInListTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ShopInList.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ShopInList";
-			};
-			name = Debug;
-		};
-		AFF5EEF92AA2216800B840A4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = VV53US7R3M;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = qqq.ShopInListTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ShopInList.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ShopInList";
-			};
-			name = Release;
-		};
-		AFF5EEFB2AA2216800B840A4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = VV53US7R3M;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = qqq.ShopInListUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = ShopInList;
-			};
-			name = Debug;
-		};
-		AFF5EEFC2AA2216800B840A4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = VV53US7R3M;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = qqq.ShopInListUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = ShopInList;
 			};
 			name = Release;
 		};
@@ -1415,24 +969,6 @@
 			buildConfigurations = (
 				AF095E612AB4EDE500A9D7DD /* Debug */,
 				AF095E622AB4EDE500A9D7DD /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		AF095E682AB4EDE500A9D7DD /* Build configuration list for PBXNativeTarget "ShopInListWatch Watch AppTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				AF095E632AB4EDE500A9D7DD /* Debug */,
-				AF095E642AB4EDE500A9D7DD /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		AF095E692AB4EDE500A9D7DD /* Build configuration list for PBXNativeTarget "ShopInListWatch Watch AppUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				AF095E652AB4EDE500A9D7DD /* Debug */,
-				AF095E662AB4EDE500A9D7DD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1460,24 +996,6 @@
 			buildConfigurations = (
 				AFF5EEF52AA2216800B840A4 /* Debug */,
 				AFF5EEF62AA2216800B840A4 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		AFF5EEF72AA2216800B840A4 /* Build configuration list for PBXNativeTarget "ShopInListTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				AFF5EEF82AA2216800B840A4 /* Debug */,
-				AFF5EEF92AA2216800B840A4 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		AFF5EEFA2AA2216800B840A4 /* Build configuration list for PBXNativeTarget "ShopInListUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				AFF5EEFB2AA2216800B840A4 /* Debug */,
-				AFF5EEFC2AA2216800B840A4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
