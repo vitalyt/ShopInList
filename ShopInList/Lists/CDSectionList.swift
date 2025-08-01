@@ -54,8 +54,8 @@ struct CDSectionList: View {
             }
 #endif
             ToolbarItem() {
-                Button(action: addItem) {
-                    Label("Add Item", systemImage: "plus")
+                Button(action: showAlert) {
+                    Label("Show alert", systemImage: "minus")
                 }
             }
         }
@@ -70,7 +70,11 @@ struct CDSectionList: View {
             CoreDataStack.shared.save()
         }
     }
-
+    
+    private func showAlert() {
+        Alert(title: "Test title")
+    }
+    
     private func doneAction() {
         withAnimation {
             let selectedSections = items.filter({ $0.isSelected })
